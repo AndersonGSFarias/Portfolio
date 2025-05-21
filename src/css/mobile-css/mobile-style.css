@@ -1,0 +1,201 @@
+/* Cabecalho */
+
+@media (max-width: 999px) {
+  .content-container {
+    background-image: url(../../img/backgrund-mobile.png);
+    background-size: cover;
+  }
+  .content-container .about-me-container .projects-btn-container-desktop,
+  .content-container .about-me-container .about-me .text-container #text-desktop,
+  .content-container .about-me-container .my-picture .contacts-container-desktop {
+    display: none; /* Faz com que certos elementos do desktop não apareçam no mobile */
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+  header nav .mobile-menu {
+    display: flex;
+    justify-items: center;
+    align-content: center;
+  }
+
+  header nav .mobile-menu .menu-icon {
+    color: #ffffff;
+    width: 35px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  header nav .mobile-menu .menu-icon:hover {
+    cursor: pointer;
+  }
+
+  header nav .nav-list {
+    display: flex;
+    position: absolute;
+    top: 8.5vh;
+    right: 0;
+    width: 30vh;
+    height: 40vh;
+    margin-right: 20px;
+    margin-top: 10px;
+    background-color: rgb(0, 0, 70);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    transform: translateX(110%);
+    transition: transform 0.2s ease-in;
+  }
+
+  header nav .nav-list li {
+    display: flex;
+    margin: 0px;
+    opacity: 0;
+  }
+  header nav .nav-list li a {
+    font-family: "Outfit-Regular";
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 15px;
+  }
+
+  header nav .nav-list.active {
+    transform: translateX(0);
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .mobile-menu.active .menu-icon {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
+
+  /* Corpo da pagina */
+  .content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-container .about-me-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Caixa da imagem e redes sociais */
+
+  .content-container .about-me-container .my-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #13139540;
+    border-radius: 20px;
+    width: 90%;
+    padding: 22px 0px 19px 0px;
+    margin-top: 21px;
+  }
+  .content-container .about-me-container .my-picture .img-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 22px;
+    width: 100%;
+  }
+  .content-container .about-me-container .my-picture .img-box .my-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding-bottom: 20px;
+  }
+  .content-container .about-me-container .my-picture .rede-social-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+  }
+
+  .content-container .about-me-container .my-picture .rede-social-container a img {
+    width: clamp(42px, 8vw, 42px);
+    transition: transform 0.3s ease;
+  }
+
+  .content-container .about-me-container .my-picture .rede-social-container a img:hover {
+    width: clamp(42px, 8vw, 42px);
+    transform: scale(1.2);
+  }
+
+  /* Caixa do texto sobre mim */
+  .content-container .about-me-container .about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+  }
+  .content-container .about-me-container .about-me .title-container {
+    margin: 21px 0px 16px 16px;
+  }
+
+  .content-container .about-me-container .about-me .text-container {
+    width: 90%;
+    margin-left: 16px;
+  }
+
+  .content-container .about-me-container .about-me .title-container{
+    margin-bottom: 10px;
+  }
+
+  .content-container .about-me-container .about-me .text-container #text-mobile {
+    font-family: "Outfit-Light";
+  }
+  /* Botão de projetos */
+  .content-container .about-me-container #projects-btn-container-mobile {
+    margin: 40px 0px;
+    background-color: #ffffff;
+    border: 1.5px solid #000046;
+    border-radius: 50px;
+    padding: 4px 15px;
+    transition: transform 0.3s ease;
+  }
+
+  .content-container .about-me-container #projects-btn-container-mobile:hover {
+    transform: scale(1.2);
+  }
+
+  .content-container .about-me-container .contact-container {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin-bottom: 24px;
+  }
+  .content-container .about-me-container .contact-container .contact-box {
+    text-align: center;
+  }
+
+  /* Rodapé */
+
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    background-color: #000046;
+  }
+  .footer-container a {
+    color: #fff;
+    font-family: "Outfit-Light";
+  }
+}

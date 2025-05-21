@@ -1,0 +1,217 @@
+@media (min-width: 999px) {
+  /* Faz com que certos elementos do mobile não apareçam no desktop */
+  header nav .mobile-menu,
+  .content-container .about-me-container .contact-container,
+  .content-container .about-me-container #projects-btn-container-mobile,
+  .content-container .about-me-container .about-me .text-container #text-mobile {
+    display: none;
+  }
+  /* Cabecalho */
+
+  
+  header nav {
+    margin: 37px 118px 0px 76px;
+  }
+  header nav .nav-list {
+    display: flex;
+    justify-content: space-between;
+    width: 475px;
+  }
+  header nav .nav-list .list-option a {
+    position: relative;
+
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #000;
+    transition: transform 0.4s ease;
+  }
+
+  header nav .nav-list .list-option a:hover {
+    transform: scale(1.2);
+  }
+
+  header nav .nav-list .list-option a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #000;
+    transition: width 0.3s ease;
+  }
+
+  header nav .nav-list .list-option #index-option::after {
+    background-color: #0b2b67;
+  }
+
+  header nav .nav-list .list-option a:hover::after {
+    width: 100%;
+  }
+
+  header nav .nav-list .list-option #index-option {
+    color: #0b2b67;
+  }
+
+  /* Conteudo principal */
+
+  .content-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+
+  .content-container .about-me-container {
+    display: flex;
+    margin: 24px 0px 0px 106px;
+    width: 100%;
+  }
+
+  /* Caixa da imagem e redes sociais */
+  .content-container .about-me-container .my-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 140px 0px 10px;
+    background-color: #13139540;
+    border-radius: 50px;
+    box-shadow: 5px 2px 5px hsla(0, 0%, 0%, 0.25);
+    width: 30%;
+    height: 90%;
+  }
+
+  .content-container .about-me-container .my-picture .img-container {
+    margin: 43px 0px 0px 0px;
+  }
+  .content-container .about-me-container .my-picture .img-container .img-box .my-img {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .content-container .about-me-container .my-picture .img-container .img-box p {
+    border-bottom: 1px solid #000046;
+  }
+
+  /* Caixa dos contatos no desktop */
+  .content-container .about-me-container .my-picture .contacts-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 1000%;
+  }
+  .content-container .about-me-container .my-picture .contacts-container-desktop {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .content-container .about-me-container .my-picture .contacts-container-desktop p {
+    color: #000046;
+    text-transform: uppercase;
+  }
+  .content-container .about-me-container .my-picture .contacts-container-desktop a {
+    color: #000;
+    font-family: "Outfit-Light";
+  }
+
+  .content-container .about-me-container .my-picture .rede-social-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fff;
+    border-radius: 0px 0px 50px 50px;
+    width: 100%;
+    height: 5rem;
+    margin-top: auto;
+  }
+  .content-container .about-me-container .my-picture .rede-social-container a {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content-container .about-me-container .my-picture .rede-social-container a img {
+    width: 50px;
+    transition: transform 0.3s ease;
+    padding: 10px 0px;
+  }
+
+  .content-container .about-me-container .my-picture .rede-social-container a img:hover {
+    transform: scale(1.2);
+  }
+
+  /* Caixa do texto sobre mim */
+  .content-container .about-me-container .about-me {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 10px 0px 0px 0px;
+  }
+
+  /* Titulo da caixa de texto */
+  .content-container .about-me-container .about-me .title-container h1 {
+    font-family: "Outfit-Bold";
+    font-size: 50px;
+  }
+  .content-container .about-me-container .about-me .title-container p {
+    font-family: "Outfit-Regular";
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  .content-container .about-me-container .about-me .text-container {
+    margin: 20px 0px;
+  }
+
+  .content-container .about-me-container .about-me .text-container #text-desktop p {
+    font-family: "Outfit-Light";
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0px 0px 5px 0px;
+  }
+  .content-container .about-me-container .about-me .text-container .about-me-btn-box {
+    display: flex;
+    gap: 20px;
+  }
+
+  .content-container .about-me-container .about-me .text-container .about-me-btn-box .projects-btn-container-desktop {
+    background-color: #ffffff;
+    border: 1.5px solid #000046;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+    width: 90px;
+    text-align: center;
+    margin: 5px 0px 25px 0px;
+    padding: 4px 15px;
+    box-shadow: 2px 3px 5px hsla(0, 0%, 0%, 0.25);
+  }
+
+  .content-container .about-me-container .about-me .text-container .about-me-btn-box .projects-btn-container-desktop:hover {
+    transform: scale(1.2);
+  }
+
+  .content-container .about-me-container .about-me .text-container .about-me-btn-box .projects-btn-container-desktop a {
+    text-transform: uppercase;
+    color: #000;
+  }
+
+  .content-container .about-me-container .about-me .text-container .about-me-btn-box #btn-resume,
+  .content-container .about-me-container .about-me .text-container .about-me-btn-box #btn-resume a {
+    background-color: #000046;
+    color: #fff;
+  }
+  /* Rodapé */
+  .footer-container {
+    height: 36px;
+    background-color: #000046;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .footer-container a {
+    color: #fff;
+    font-family: "Outfit-Light";
+    margin: 0px 20px;
+  }
+}
