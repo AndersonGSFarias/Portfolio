@@ -45,7 +45,7 @@ header nav .title .second-name {
 /* Conteudo principal */
 
 /* Meu nome no perfil */
-.content-container .about-me-container .my-picture .img-box p {
+.img-box p {
   font-family: "Outfit-SemiBold";
   text-transform: uppercase;
   font-size: clamp(20px, 5vw, 25px);
@@ -53,13 +53,13 @@ header nav .title .second-name {
 }
 /* Titulo da caixa de texto */
 
-.content-container .about-me-container .about-me .title-container h1 {
+.title-container h1 {
   font-size: clamp(28px, 5vw, 32px);
   text-transform: uppercase;
   color: #000046;
 }
 /* Efeito de digitacao */
-.content-container .about-me-container .about-me .title-container #text-typing {
+#text-typing {
   white-space: nowrap;
   display: inline-block;
   border-right: 1px solid #000046;
@@ -92,13 +92,11 @@ header nav .title .second-name {
   }
 }
 /* Conteudo da caixa de texto */
-
-.content-container .about-me-container .projects-btn-container a {
+.projects-btn-container a {
   text-transform: uppercase;
   color: #000;
 }
 /* Contatos */
-
-.content-container .about-me-container .contact-container .contact-box a {
+.contact-box a {
   color: #000;
 }
