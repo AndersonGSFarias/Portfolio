@@ -1,6 +1,7 @@
 /* Cabecalho */
 
 @media (max-width: 1023px) {
+  html,
   body {
     overflow-x: hidden;
   }
