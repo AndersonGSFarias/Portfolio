@@ -1,6 +1,9 @@
 /* Cabecalho */
 
 @media (max-width: 1023px) {
+  body {
+    overflow-x: hidden;
+  }
   .content-container {
     background-image: url(../../img/backgrund-mobile.png);
     background-size: cover;
@@ -9,9 +12,6 @@
   .text-container #text-desktop,
   .contacts-container-desktop {
     display: none; /* Faz com que certos elementos do desktop não apareçam no mobile */
-  }
-  body {
-    overflow-x: hidden;
   }
 
   .mobile-menu {
@@ -32,20 +32,27 @@
   }
 
   .nav-list {
-    display: flex;
     position: absolute;
     top: 8.5vh;
     right: 0;
     width: 30vh;
-    margin-top: 20px;
     height: 40vh;
     background-color: rgb(0, 0, 70);
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     border-radius: 10px;
-    transform: translateX(110%);
-    transition: transform 0.2s ease-in;
+    overflow: hidden;
+    max-width: 0;
+    padding: 0;
+    border: none;
+    transition: max-width 0.3s ease, padding 0.3s ease;
+  }
+
+  .nav-list.active {
+    display: flex;
+    max-width: 30vh;
+    margin-right: 20px;
   }
 
   .nav-list li {
@@ -58,12 +65,6 @@
     text-transform: uppercase;
     color: #ffffff;
     font-size: 15px;
-  }
-
-  .nav-list.active {
-    transform: translateX(0);
-    margin-right: 20px;
-    
   }
 
   @keyframes navLinkFade {
@@ -158,7 +159,7 @@
     margin-bottom: 10px;
   }
 
-   #text-mobile {
+  #text-mobile {
     font-family: "Outfit-Light";
   }
   /* Botão de projetos */
@@ -191,7 +192,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%; 
+    width: 100%;
     height: 56px;
     background-color: #000046;
   }

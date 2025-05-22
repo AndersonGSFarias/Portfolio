@@ -80,10 +80,10 @@
   }
 
   .img-container {
-    margin: 43px 0px 0px 0px;
+    margin-top: 43px;
   }
   .my-img {
-    margin: 0px 0px 30px 0px;
+    margin-bottom: 30px;
   }
 
   .img-box p {
@@ -96,7 +96,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 1000%;
+    height: 100%;
   }
   .contacts-container-desktop {
     display: flex;
@@ -144,7 +144,7 @@
     display: flex;
     flex-direction: column;
     width: 45%;
-    margin: 10px 0px 0px 0px;
+    margin-top: 10px;
   }
 
   /* Titulo da caixa de texto */
@@ -165,7 +165,7 @@
     font-family: "Outfit-Light";
     font-weight: 300;
     line-height: 1.6;
-    margin: 0px 0px 5px 0px;
+    margin-bottom: 5px;
   }
   .about-me-btn-box {
     display: flex;
