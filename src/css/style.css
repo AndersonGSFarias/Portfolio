@@ -11,6 +11,13 @@
   flex: 1;
 }
 
+/* Faz com que a animacao so comece depois que a pagina carregar */
+body:not(.loaded) #text-typing {
+  animation: none !important;
+  width: 0ch !important;
+  border-right: none !important;
+}
+
 /* Barra de navegação */
 header nav {
   display: flex;
