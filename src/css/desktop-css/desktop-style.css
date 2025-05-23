@@ -1,7 +1,6 @@
 @media (min-width: 1024px) {
   /* Faz com que certos elementos do mobile não apareçam no desktop */
   header nav .mobile-menu,
-  .content-container .about-me-container .contact-container,
   .content-container .about-me-container #projects-btn-container-mobile,
   .content-container .about-me-container .about-me .text-container #text-mobile {
     display: none;
@@ -72,11 +71,12 @@
     flex-direction: column;
     align-items: center;
     margin: 0px 140px 0px 10px;
-    background-color: #13139540;
+    background-color: rgba(19, 19, 149, 0.251);
     border-radius: 50px;
-    box-shadow: 5px 2px 5px hsla(0, 0%, 0%, 0.25);
+    box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.25);
     width: 30%;
     height: 90%;
+    max-height: 500px; /* ajuste conforme seu layout */
   }
 
   .img-container {
@@ -91,27 +91,24 @@
   }
 
   /* Caixa dos contatos no desktop */
-  .contacts-box {
+  .technology-box {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    margin-bottom: auto;
+    margin-top: 10px;
   }
-  .contacts-container-desktop {
+  .technology-container-desktop {
     display: flex;
-    width: 100%;
-    justify-content: space-around;
+    width: 50%;
+    justify-content: center;
     text-align: center;
+    gap: 10px;
   }
 
-  .contacts-container-desktop p {
-    color: #000046;
-    text-transform: uppercase;
-  }
-  .contacts-container-desktop a {
-    color: #000;
-    font-family: "Outfit-Light";
+  .technology-logo img {
+    width: 30px;
   }
 
   .rede-social-container {
@@ -121,8 +118,7 @@
     background-color: #fff;
     border-radius: 0px 0px 50px 50px;
     width: 100%;
-    height: 5rem;
-    margin-top: auto;
+    height: 6rem;
   }
   .rede-social-container a {
     display: flex;
@@ -131,12 +127,20 @@
 
   .rede-social-container a img {
     width: 50px;
-    transition: transform 0.3s ease;
-    padding: 10px 0px;
   }
 
-  .rede-social-container a img:hover {
+  .rede-social-icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  .rede-social-icon-box:hover {
     transform: scale(1.2);
+  }
+
+  .rede-social-icon-box p {
+    color: #000046;
   }
 
   /* Caixa do texto sobre mim */

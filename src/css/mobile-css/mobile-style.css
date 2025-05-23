@@ -11,7 +11,7 @@
   }
   .projects-btn-container-desktop,
   .text-container #text-desktop,
-  .contacts-container-desktop {
+  .contacts-container-desktop, .rede-social-icon-box p {
     display: none; /* Faz com que certos elementos do desktop não apareçam no mobile */
   }
 
@@ -104,9 +104,11 @@
     flex-direction: column;
     align-items: center;
     background-color: #13139540;
-    border-radius: 20px;
-    width: 90%;
-    padding: 22px 0px 19px 0px;
+    box-shadow: 5px 2px 5px hsla(0, 0%, 0%, 0.25);
+
+    border-radius: 50px;
+    width: 85%;
+    padding: 0px 0px 0px 0px;
     margin-top: 21px;
   }
   .img-box {
@@ -114,30 +116,56 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 22px;
     width: 100%;
   }
   .my-img {
     width: 100%;
     max-width: 300px;
     height: auto;
-    padding-bottom: 20px;
+    padding: 22px 0px 20px 0px;
   }
+
+    .img-box p {
+      border-bottom: 1px solid #000046;
+  }
+
+    .technology-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0px 10px 0px;
+  }
+    .technology-container-desktop {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+  }
+  .technology-logo img {
+    width: 30px;
+  }
+
   .rede-social-container {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    width: 70%;
+    justify-content: space-evenly;
+    background-color: #fff;
+    border-radius: 0px 0px 50px 50px;
+    width: 100%;
+    height: 4rem;
+  }
+  .rede-social-container a {
+    display: flex;
+    justify-content: center;
   }
 
   .rede-social-container a img {
-    width: clamp(42px, 8vw, 42px);
+    width: 40px;
     transition: transform 0.3s ease;
-  }
-
-  .rede-social-container a img:hover {
-    width: clamp(42px, 8vw, 42px);
-    transform: scale(1.2);
+    padding: 0px;
   }
 
   /* Caixa do texto sobre mim */
@@ -175,16 +203,6 @@
 
   #projects-btn-container-mobile:hover {
     transform: scale(1.2);
-  }
-
-  .contact-container {
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-    margin-bottom: 24px;
-  }
-  .contact-box {
-    text-align: center;
   }
 
   /* Rodapé */
