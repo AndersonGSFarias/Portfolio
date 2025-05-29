@@ -11,7 +11,8 @@
   }
   .projects-btn-container-desktop,
   .text-container #text-desktop,
-  .contacts-container-desktop, .rede-social-icon-box p {
+  .contacts-container-desktop,
+  .rede-social-icon-box p {
     display: none; /* Faz com que certos elementos do desktop não apareçam no mobile */
   }
 
@@ -103,9 +104,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #13139540;
+    background-color: rgba(19, 19, 149, 0.251);
     box-shadow: 5px 2px 5px hsla(0, 0%, 0%, 0.25);
-
     border-radius: 50px;
     width: 85%;
     padding: 0px 0px 0px 0px;
@@ -125,11 +125,7 @@
     padding: 22px 0px 20px 0px;
   }
 
-    .img-box p {
-      border-bottom: 1px solid #000046;
-  }
-
-    .technology-box {
+  .technology-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,7 +133,7 @@
     height: 100%;
     padding: 10px 0px 10px 0px;
   }
-    .technology-container-desktop {
+  .technology-container-desktop {
     display: flex;
     width: 70%;
     justify-content: center;

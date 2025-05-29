@@ -6,16 +6,29 @@
   min-height: 100vh; /* Faz com que ele ocupe 100% da altura da tela */
 }
 
-/* O conteúdo principal cresce, o footer vai pro fim */
-.page-reset > *:not(footer) {
-  flex: 1;
+/* Faz com que a barra de scroll só apareça quando necessario */
+html,
+body {
+  overflow-x: auto;
+  overflow-y: auto;
 }
 
-/* Faz com que a animacao so comece depois que a pagina carregar */
-body:not(.loaded) #text-typing {
-  animation: none !important;
-  width: 0ch !important;
-  border-right: none !important;
+/* O conteúdo principal cresce, o footer vai pro fim */
+main {
+  min-height: calc(100vh - 101px);
+}
+
+/* Esconde a página inicialmente */
+body:not(.loaded) #slide-left {
+  opacity: 0;
+  transform: translateX(100%); /* deslize da direita para a esquerda */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Quando carregar, mostra com o efeito de deslize */
+body.loaded #slide-left {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Barra de navegação */
@@ -57,7 +70,9 @@ header nav .title .second-name {
   text-transform: uppercase;
   font-size: clamp(20px, 5vw, 25px);
   color: #000046;
+  border-bottom: 1px solid #000046;
 }
+
 /* Titulo da caixa de texto */
 
 .title-container h1 {
@@ -106,4 +121,61 @@ header nav .title .second-name {
 /* Contatos */
 .contact-box a {
   color: #000;
+}
+
+/* Deslize das páginas */
+/* SAÍDA */
+
+.page-reset.slide-out-left {
+  animation: slideOutToLeft 1s ease forwards;
+}
+
+@keyframes slideOutToLeft {
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.page-reset.slide-out-right {
+  animation: slideOutToRight 1s ease forwards;
+}
+
+@keyframes slideOutToRight {
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* ENTRADA */
+
+.page-reset.slide-in-left {
+  animation: slideInFromLeft 1s ease;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.page-reset.slide-in-right {
+  animation: slideInFromRight 1s ease;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

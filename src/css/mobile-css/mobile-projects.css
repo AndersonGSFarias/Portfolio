@@ -1,0 +1,206 @@
+@media (max-width: 1023px) {
+  /* Reset da página mobile */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Botao do menu */
+
+  .mobile-menu {
+    display: flex;
+    justify-items: center;
+    align-content: center;
+  }
+
+  .menu-icon {
+    color: #ffffff;
+    width: 35px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .menu-icon:hover {
+    cursor: pointer;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 8.5vh;
+    right: 0;
+    width: 30vh;
+    height: 40vh;
+    background-color: rgb(0, 0, 70);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 0;
+    padding: 0;
+    border: none;
+    transition: max-width 0.3s ease, padding 0.3s ease;
+    z-index: 1;
+  }
+
+  .nav-list.active {
+    display: flex;
+    max-width: 30vh;
+    margin-right: 20px;
+  }
+
+  .nav-list li {
+    display: flex;
+    margin: 0px;
+    opacity: 0;
+  }
+  .nav-list li a {
+    font-family: "Outfit-Regular";
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 15px;
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .mobile-menu.active .menu-icon {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
+
+  /* Galeria de projetos */
+  .galery-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Titulo e texto */
+  .text-container {
+    width: 88%;
+    text-align: center;
+    height: 193px;
+    margin-top: 30px;
+  }
+  .text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .title-box {
+    border-bottom: #000046 1px solid;
+    margin-bottom: 20px;
+  }
+  .title-box h1 {
+    font-family: "Outfit-Light";
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #000046;
+  }
+  .content-text {
+    width: 88%;
+  }
+
+  .content-text p {
+    font-family: "Outfit-Light";
+    font-size: 18px;
+  }
+
+  /* Projetos da galeria */
+
+  .galery {
+    width: 100%; /* <-- ESSENCIAL para liberar espaço horizontal */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 333px);
+    gap: 60px 60px;
+    justify-content: center; /* centraliza os cards quando sobra espaço */
+    margin-bottom: 30px;
+  }
+
+  .project-box {
+    width: 100%;
+    height: 210px;
+    border-radius: 30px;
+    box-shadow: 5px 2px 5px hsla(0, 0%, 0%, 0.25);
+  }
+
+  .project-top {
+    position: relative;
+    height: 148px;
+  }
+
+  .project-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 30px 30px 0px 0px;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 19, 149, 0.336);
+    pointer-events: none;
+    border-radius: 30px 30px 0px 0px;
+  }
+
+  .project-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 62px;
+    border: 1px solid rgba(19, 19, 149, 0.3);
+    border-radius: 0px 0px 30px 30px;
+  }
+
+  .project-bottom p,
+  span {
+    text-transform: uppercase;
+    color: #000046;
+    font-size: 20px;
+    font-family: "Outfit-Light";
+  }
+
+  .project-bottom span {
+    margin: 0px 6px;
+  }
+
+  .technologys {
+    display: flex;
+    gap: 10px;
+  }
+  .technology-used {
+    width: 25px;
+  }
+
+  /* Rodapé */
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    background-color: #000046;
+  }
+  .footer-container a {
+    color: #fff;
+    font-family: "Outfit-Light";
+  }
+}

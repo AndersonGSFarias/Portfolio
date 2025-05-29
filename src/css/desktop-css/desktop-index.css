@@ -61,7 +61,7 @@
 
   .about-me-container {
     display: flex;
-    margin: 24px 0px 0px 106px;
+    margin: 44px 0px 0px 106px;
     width: 100%;
   }
 
@@ -84,10 +84,6 @@
   }
   .my-img {
     margin-bottom: 30px;
-  }
-
-  .img-box p {
-    border-bottom: 1px solid #000046;
   }
 
   /* Caixa dos contatos no desktop */

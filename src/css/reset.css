@@ -153,7 +153,6 @@ a {
   font-style: normal;
 }
 
-
 @font-face {
   font-family: "Outfit-SemiBold";
   src: url(../fonts/outfit/static/Outfit-SemiBold.ttf) format(truetype);
@@ -169,16 +168,8 @@ a {
 }
 
 @font-face {
-  font-family: "Outfit-Bold";
-  src: url(../fonts/outfit/static/Outfit-Thin.ttf) format(truetype);
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Outfit-Light";
   src: url(../fonts/outfit/static/Outfit-Light.ttf) format(truetype);
   font-weight: 100;
   font-style: normal;
 }
-
