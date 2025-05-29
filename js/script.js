@@ -1,4 +1,29 @@
-// Função do botão de menu no mobile
+// =====================
+// Script de transição entre páginas
+// =====================
+
+// Garante que a animação de entrada seja aplicada ao carregar a nova página
+window.addEventListener("load", () => {
+  // Marca a página como carregada (ex: para efeitos de texto)
+  document.body.classList.add("loaded");
+
+  // Verifica qual direção foi definida na página anterior
+  const direction = localStorage.getItem("slideDirection");
+  const page = document.querySelector(".page-reset");
+
+  if (direction === "left") {
+    page.classList.add("slide-in-left"); // Entrando da direita (indo para frente)
+  } else if (direction === "right") {
+    page.classList.add("slide-in-right"); // Entrando da esquerda (voltando)
+  }
+
+  // Limpa a direção para não reaplicar na próxima transição
+  localStorage.removeItem("slideDirection");
+});
+
+// =====================
+// Botão de menu do mobile
+// =====================
 class MobileNavbar {
   constructor(mobileMenu, navList, navLinks) {
     this.mobileMenu = document.querySelector(mobileMenu);
@@ -11,7 +36,11 @@ class MobileNavbar {
 
   animateLinks() {
     this.navLinks.forEach((link, index) => {
-      link.style.animation ? (link.style.animation = "") : (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`);
+      link.style.animation
+        ? (link.style.animation = "")
+        : (link.style.animation = `navLinkFade 0.5s ease forwards ${
+            index / 7 + 0.3
+          }s`);
     });
   }
 
@@ -20,9 +49,11 @@ class MobileNavbar {
     this.mobileMenu.classList.toggle(this.activeClass);
     this.animateLinks();
   }
+
   addClickEvent() {
     this.mobileMenu.addEventListener("click", this.handleClick);
   }
+
   init() {
     if (this.mobileMenu) {
       this.addClickEvent();
@@ -31,50 +62,52 @@ class MobileNavbar {
   }
 }
 
-const mobileNavbar = new MobileNavbar(".mobile-menu", ".nav-list", ".nav-list li");
+const mobileNavbar = new MobileNavbar(
+  ".mobile-menu",
+  ".nav-list",
+  ".nav-list li"
+);
 mobileNavbar.init();
 
-// Animação de entrada e saida da pagina
-// Função para aplicar animação de saída e redirecionar depois
-function animateAndRedirect(link, direction) {
-  const page = document.querySelector(".page-reset");
-  localStorage.setItem("transitionDirection", direction);
-  page.classList.add(`slide-out-${direction}`);
+// =====================
+// Transição ao clicar nos links internos
+// =====================
 
-  setTimeout(() => {
-    window.location.href = link.href;
-  }, 1000); // deve ser igual ao tempo da animação de saída
-}
-
-// Intercepta todos os links internos
-document.querySelectorAll("a[href]").forEach((link) => {
+document.querySelectorAll("a[href]").forEach(link => {
   const href = link.getAttribute("href");
 
-  if (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("#") || link.target === "_blank") return;
+  // Ignora links externos, âncoras ou que abrem em nova aba
+  if (
+    href.startsWith("http") ||
+    href.startsWith("mailto") ||
+    href.startsWith("#") ||
+    link.target === "_blank"
+  ) return;
 
   link.addEventListener("click", function (e) {
     e.preventDefault();
 
-    // Se está indo para index.html, vamos voltar → saída direita
-    if (href.includes("index.html") || href === "/index.html") {
-      animateAndRedirect(this, "right");
+    const page = document.querySelector(".page-reset");
+    const target = this.href;
+
+    // Se for voltar para o index, aplica saída para a direita
+    if (
+      href.includes("index.html") ||
+      href === "/" ||
+      href === "./" ||
+      href === "./index.html"
+    ) {
+      localStorage.setItem("slideDirection", "right");
+      page.classList.add("slide-out-right");
     } else {
-      // Indo para qualquer outra página → saída esquerda
-      animateAndRedirect(this, "left");
+      // Indo para outras páginas, aplica saída para a esquerda
+      localStorage.setItem("slideDirection", "left");
+      page.classList.add("slide-out-left");
     }
+
+    // Redireciona após a animação (tempo deve ser igual ao CSS)
+    setTimeout(() => {
+      window.location.href = target;
+    }, 1000); // 1s = tempo da animação CSS
   });
-});
-
-// Animação de entrada com base no localStorage
-window.addEventListener("DOMContentLoaded", () => {
-  const direction = localStorage.getItem("transitionDirection");
-  const page = document.querySelector(".page-reset");
-
-  if (direction === "left") {
-    page.classList.add("slide-in-left");
-  } else if (direction === "right") {
-    page.classList.add("slide-in-right");
-  }
-
-  localStorage.removeItem("transitionDirection");
 });
