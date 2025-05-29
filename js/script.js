@@ -56,7 +56,7 @@ document.querySelectorAll("a[href]").forEach((link) => {
     e.preventDefault();
 
     // Se está indo para index.html, vamos voltar → saída direita
-    if (href.includes("index.html") || href === "/" || href === "./" || href === "./index.html" || href === "/index.html") {
+    if (href.includes("index.html") || href === "/index.html") {
       animateAndRedirect(this, "right");
     } else {
       // Indo para qualquer outra página → saída esquerda
