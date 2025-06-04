@@ -3,7 +3,9 @@
   /* Faz com que certos elementos do mobile não apareçam no desktop */
   header nav .mobile-menu,
   .content-container .about-me-container #projects-btn-container-mobile,
-  .content-container .about-me-container .about-me .text-container #text-mobile, #cv-btn-container-mobile {
+  .content-container .about-me-container .about-me .text-container #text-mobile,
+  #cv-btn-container-mobile,
+  .text-mobile {
     display: none;
   }
 
@@ -433,7 +435,7 @@
   #cv-btn-container-mobile a {
     text-transform: uppercase;
     color: #000;
-}
+  }
   /* Rodapé */
 
   .footer-container {
