@@ -3,18 +3,23 @@
   /* Faz com que certos elementos do mobile não apareçam no desktop */
   header nav .mobile-menu,
   .content-container .about-me-container #projects-btn-container-mobile,
-  .content-container .about-me-container .about-me .text-container #text-mobile {
+  .content-container .about-me-container .about-me .text-container #text-mobile, #cv-btn-container-mobile {
     display: none;
   }
 
   /* Cabecalho */
   header nav {
-    margin: 37px 118px 0px 76px;
+    margin: 17px 118px 0px 76px;
   }
   header nav .nav-list {
     display: flex;
     justify-content: space-between;
     width: 475px;
+  }
+
+  .name,
+  .second-name {
+    font-size: 24px;
   }
   .list-option a {
     position: relative;
@@ -54,10 +59,12 @@
   }
 
   /* Conteudo principal */
+  /* O conteúdo principal cresce, o footer vai pro fim */
   .content-container {
+    height: 700px;
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 
   .about-me-container {
@@ -221,15 +228,24 @@
   body {
     overflow-x: hidden;
   }
+  header {
+    z-index: 1000; /* para ficar acima dos outros elementos */
+  }
+
   .content-container {
     background-image: url(../../img/backgrund-mobile.png);
     background-size: cover;
   }
   .projects-btn-container-desktop,
-  .text-container #text-desktop,
+  #text-desktop,
   .contacts-container-desktop,
   .rede-social-icon-box p {
     display: none; /* Faz com que certos elementos do desktop não apareçam no mobile */
+  }
+
+  .name,
+  .second-name {
+    font-size: 24px;
   }
 
   .mobile-menu {
@@ -325,7 +341,7 @@
     border-radius: 50px;
     width: 85%;
     padding: 0px 0px 0px 0px;
-    margin-top: 21px;
+    margin-top: 41px;
   }
   .img-box {
     display: flex;
@@ -333,6 +349,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 20px;
   }
   .my-img {
     width: 100%;
@@ -348,6 +365,7 @@
     width: 100%;
     height: 100%;
     padding: 10px 0px 10px 0px;
+    margin-bottom: 20px;
   }
   .technology-container-desktop {
     display: flex;
@@ -384,28 +402,23 @@
   .about-me {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 90%;
-  }
-  .title-container {
-    margin: 21px 0px 16px 16px;
-  }
-
-  .text-container {
-    width: 90%;
-    margin-left: 16px;
+    width: 100%;
   }
 
   .title-container {
     margin-bottom: 10px;
+    margin: 21px 0px 6px 56px;
+    width: 90%;
   }
 
-  #text-mobile {
+  .text-mobile {
     font-family: "Outfit-Light";
+    width: 80%;
+    margin: 0px 0px 35px 56px;
   }
-  /* Botão de projetos */
-  #projects-btn-container-mobile {
-    margin: 40px 0px;
+
+  #cv-btn-container-mobile {
+    margin-bottom: 35px;
     background-color: #ffffff;
     border: 1.5px solid #000046;
     border-radius: 50px;
@@ -413,10 +426,14 @@
     transition: transform 0.3s ease;
   }
 
-  #projects-btn-container-mobile:hover {
+  #cv-btn-container-mobile:hover {
     transform: scale(1.2);
   }
 
+  #cv-btn-container-mobile a {
+    text-transform: uppercase;
+    color: #000;
+}
   /* Rodapé */
 
   .footer-container {

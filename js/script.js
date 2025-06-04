@@ -1,27 +1,4 @@
 // =====================
-// Script de transição entre páginas
-// =====================
-
-// Garante que a animação de entrada seja aplicada ao carregar a nova página
-window.addEventListener("load", () => {
-  // Marca a página como carregada (ex: para efeitos de texto)
-  document.body.classList.add("loaded");
-
-  // Verifica qual direção foi definida na página anterior
-  const direction = localStorage.getItem("slideDirection");
-  const page = document.querySelector(".page-reset");
-
-  if (direction === "left") {
-    page.classList.add("slide-in-left"); // Entrando da direita (indo para frente)
-  } else if (direction === "right") {
-    page.classList.add("slide-in-right"); // Entrando da esquerda (voltando)
-  }
-
-  // Limpa a direção para não reaplicar na próxima transição
-  localStorage.removeItem("slideDirection");
-});
-
-// =====================
 // Botão de menu do mobile
 // =====================
 class MobileNavbar {
@@ -36,11 +13,7 @@ class MobileNavbar {
 
   animateLinks() {
     this.navLinks.forEach((link, index) => {
-      link.style.animation
-        ? (link.style.animation = "")
-        : (link.style.animation = `navLinkFade 0.5s ease forwards ${
-            index / 7 + 0.3
-          }s`);
+      link.style.animation ? (link.style.animation = "") : (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`);
     });
   }
 
@@ -62,52 +35,140 @@ class MobileNavbar {
   }
 }
 
-const mobileNavbar = new MobileNavbar(
-  ".mobile-menu",
-  ".nav-list",
-  ".nav-list li"
-);
+const mobileNavbar = new MobileNavbar(".mobile-menu", ".nav-list", ".nav-list li");
 mobileNavbar.init();
 
 // =====================
-// Transição ao clicar nos links internos
+// Animações do ScrollReveal
 // =====================
 
-document.querySelectorAll("a[href]").forEach(link => {
-  const href = link.getAttribute("href");
+document.addEventListener("DOMContentLoaded", function () {
+  // Animações específicas para dispositivos
+  const isMobile = window.matchMedia("(max-width: 1023px)").matches;
 
-  // Ignora links externos, âncoras ou que abrem em nova aba
-  if (
-    href.startsWith("http") ||
-    href.startsWith("mailto") ||
-    href.startsWith("#") ||
-    link.target === "_blank"
-  ) return;
+  // Animações específicas para mobile
+  if (isMobile) {
+    ScrollReveal().reveal(".reveal-left", {
+      origin: "left", // direção de onde vem
+      distance: "170px", // distância
+      duration: 1200, // tempo da animação
+      delay: 0, // atraso
+      easing: "ease-in-out",
+      reset: false, // se for true, repete ao voltar no scroll
+    });
 
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
+    ScrollReveal().reveal(".reveal-right", {
+      origin: "right",
+      distance: "170px",
+      duration: 1200,
+      delay: 100,
+      easing: "ease-in-out",
+      reset: false,
+    });
 
-    const page = document.querySelector(".page-reset");
-    const target = this.href;
+    ScrollReveal().reveal(".reveal-bottom", {
+      origin: "bottom",
+      distance: "40px",
+      duration: 700,
+      interval: 200, // efeito cascata entre elementos iguais
+      reset: true,
+    });
 
-    // Se for voltar para o index, aplica saída para a direita
-    if (
-      href.includes("index.html") ||
-      href === "/" ||
-      href === "./" ||
-      href === "./index.html"
-    ) {
-      localStorage.setItem("slideDirection", "right");
-      page.classList.add("slide-out-right");
-    } else {
-      // Indo para outras páginas, aplica saída para a esquerda
-      localStorage.setItem("slideDirection", "left");
-      page.classList.add("slide-out-left");
-    }
+    ScrollReveal().reveal(".reveal-top", {
+      origin: "top",
+      distance: "40px",
+      duration: 700,
+      interval: 200, // efeito cascata entre elementos iguais
+      reset: true,
+    });
 
-    // Redireciona após a animação (tempo deve ser igual ao CSS)
-    setTimeout(() => {
-      window.location.href = target;
-    }, 1000); // 1s = tempo da animação CSS
-  });
+    ScrollReveal().reveal(".text-container-galery", {
+      origin: "bottom",
+      distance: "40px",
+      duration: 1700,
+      delay: 0,
+      reset: true,
+    });
+    ScrollReveal().reveal(".project", {
+      origin: "bottom",
+      distance: "40px",
+      duration: 1700,
+      delay: 0,
+      reset: true,
+    });
+
+    ScrollReveal().reveal(".cv-btn", {
+      origin: "right",
+      distance: "170px",
+      duration: 1200,
+      delay: 0,
+      easing: "ease-in-out",
+      reset: false,
+    });
+  }
+  // Animações específicas para desktop
+  else {
+    // Animações Padrões
+    ScrollReveal().reveal(".reveal-left", {
+      origin: "left", // direção de onde vem
+      distance: "70px", // distância
+      duration: 1200, // tempo da animação
+      delay: 300, // atraso
+      easing: "ease-in-out",
+      reset: false, // se for true, repete ao voltar no scroll
+    });
+
+    ScrollReveal().reveal(".reveal-right", {
+      origin: "right",
+      distance: "70px",
+      duration: 1200,
+      delay: 300,
+      easing: "ease-in-out",
+      reset: false,
+    });
+
+    ScrollReveal().reveal(".reveal-bottom", {
+      origin: "bottom",
+      distance: "40px",
+      duration: 700,
+      interval: 200, // efeito cascata entre elementos iguais
+      reset: true,
+    });
+
+    ScrollReveal().reveal(".reveal-top", {
+      origin: "top",
+      distance: "40px",
+      duration: 700,
+      interval: 200, // efeito cascata entre elementos iguais
+      reset: true,
+    });
+
+    // Animações de elementos
+    ScrollReveal().reveal(".galery", {
+      origin: "bottom",
+      distance: "40px",
+      duration: 700,
+      delay: 0,
+      easing: "ease-in-out",
+      reset: true,
+    });
+    ScrollReveal().reveal(".title-box", {
+      origin: "left",
+      distance: "40px",
+      duration: 700,
+      delay: 0,
+      easing: "ease-in-out",
+      reset: true,
+    });
+
+    ScrollReveal().reveal(".more-projects", {
+      origin: "right",
+      distance: "70px",
+      duration: 700,
+      delay: 0,
+      easing: "ease-in-out",
+      reset: true,
+    });
+  }
 });
+more - projects;

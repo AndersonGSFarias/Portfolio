@@ -31,6 +31,7 @@ Por enquanto estou atualizando cada vez mais, em busca do portfolio perfeito! ðŸ
 ## Bibliotecas
 - Bootstrap (https://icons.getbootstrap.com/)
 - Remix icon (https://remixicon.com/)
+- ScrollReveal.js (https://scrollrevealjs.org/)
 
 
 ## Aprendizados

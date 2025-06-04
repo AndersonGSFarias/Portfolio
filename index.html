@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/projects.css" />
   </head>
-  <body onload="document.body.classList.add('loaded')">
-    <div id="slide-left" class="page-reset">
+  <body>
+    <div class="page-reset">
       <header>
         <!-- Barra de Navegacao-->
         <nav>
           <!-- Titulo -->
-          <a rel="prefetch" class="title" href="index.html">
+          <a rel="prefetch" class="title" href=".">
             <span class="name">Anderson /</span>
             <span class="second-name">Dev Front-End</span>
           </a>
@@ -28,7 +29,7 @@
             <li class="list-option"><a id="index-option" rel="prefetch" href="index.html">Ínicio</a></li>
             <li class="list-option"><a href="html/em-construcao.html">Resumo</a></li>
             <li class="list-option">
-              <a href="html/projects.html">Projetos</a>
+              <a href="#galery-section">Projetos</a>
             </li>
             <li class="list-option">
               <a href="html/em-construcao.html">Contato</a>
@@ -37,88 +38,138 @@
         </nav>
       </header>
       <!-- Conteudo Principal-->
-      <main class="content-container">
-        <article class="about-me-container">
-          <!-- Caixa de imagem de perfil-->
-          <section class="my-picture">
-            <div class="img-container">
-              <div class="img-box">
-                <img class="my-img" src="img/me.png" alt="Minha foto" />
-                <p>Anderson Farias</p>
+      <main>
+        <div class="content-container">
+          <article class="about-me-container">
+            <!-- Caixa de imagem de perfil-->
+            <section class="my-picture reveal-left">
+              <div class="img-container">
+                <div class="img-box">
+                  <img class="my-img" src="img/me.png" alt="Minha foto" />
+                  <p>Anderson Farias</p>
+                </div>
               </div>
-            </div>
+              <!-- Caixa de icones das tecnologias-->
+              <div class="technology-box">
+                <div class="technology-container-desktop">
+                  <div class="technology-logo">
+                    <img src="img/html5.png" alt="html5" />
+                  </div>
+                  <div class="technology-logo">
+                    <img src="img/css3.png" alt="css3" />
+                  </div>
+                  <div class="technology-logo">
+                    <img src="img/javascript.png" alt="javascript" />
+                  </div>
+                  <div class="technology-logo">
+                    <img src="img/reactjs.png" alt="react" />
+                  </div>
+                </div>
+              </div>
+              <div class="rede-social-container">
+                <div class="rede-social-icon-box">
+                  <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/anderson-gabriel-b86b84219/"><img src="img/linkedin.png" alt="Linkedin" /></a>
+                  <p>Linkedin</p>
+                </div>
+                <div class="rede-social-icon-box">
+                  <a rel="noopener noreferrer" target="_blank" href="https://github.com/AndersonGSFarias"><img src="img/github.png" alt="Github" /></a>
+                  <p>GitHub</p>
+                </div>
+                <div class="rede-social-icon-box">
+                  <a rel="noopener noreferrer" target="_blank" href="mailto:anderson.gsfarias05@gmail.com?subject=Olá%20Anderson%2C%20conheci%20seu%20portfólio&body=Olá%20Anderson,%20vi%20seu%20portfólio%20e%20achei%20incrível!%20Quando%20podemos%20conversar?"><img src="img/mail.png" alt="E-mail" /></a>
+                  <p>E-mail</p>
+                </div>
+                <div class="rede-social-icon-box">
+                  <a rel="noopener noreferrer" target="_blank" href="https://wa.me/5511991751095"><img src="img/whatsapp.png" alt="WhatsApp" /></a>
+                  <p>WhatsApp</p>
+                </div>
+              </div>
+            </section>
+            <!-- Caixa de texto-->
+            <section class="about-me reveal-right">
+              <!-- Titulo da caixa de texto-->
+              <div class="title-container">
+                <h1>Olá</h1>
+                <h1 id="text-typing">Bem&ndash;vindo!</h1>
+                <p>Quem sou eu e o que eu faço?</p>
+              </div>
+              <div class="text-container">
+                <!-- Botões da caixa de texto do desktop -->
+                <div class="about-me-btn-box">
+                  <div id="btn-resume" class="projects-btn-container-desktop"><a href="files/curriculo.pdf" download="Curriculo-AndersonFarias">Meu CV</a></div>
+                  <div id="btn-projects" class="projects-btn-container-desktop"><a href="html/projects.html">Projetos</a></div>
+                </div>
+                <!-- Texto do mobile -->
 
-            <!-- Caixa de icones das tecnologias-->
-            <div class="technology-box">
-              <div class="technology-container-desktop">
-                <div class="technology-logo">
-                  <img src="img/html5.png" alt="html5" />
-                </div>
-                <div class="technology-logo">
-                  <img src="img/css3.png" alt="css3" />
-                </div>
-                <div class="technology-logo">
-                  <img src="img/javascript.png" alt="javascript" />
-                </div>
-                <div class="technology-logo">
-                  <img src="img/reactjs.png" alt="react" />
+                <p class="text-mobile">Sou desenvolvedor Front-end Júnior em busca da minha primeira oportunidade profissional. Estou focado em aplicar e expandir meus conhecimentos em tecnologias.</p>
+
+                <!-- Texto do desktop-->
+                <div id="text-desktop">
+                  <p>Sou desenvolvedor Front-end Júnior, iniciando minha trajetória na área de tecnologia com entusiasmo e dedicação. Tenho focado meus estudos no desenvolvimento de interfaces modernas, responsivas e acessíveis, utilizando tecnologias como HTML, CSS, JavaScript e React.</p>
+                  <p>Busco constantemente aprimorar minhas habilidades por meio de projetos pessoais, desafios práticos e atualização contínua com as tendências do mercado. Acredito que a experiência vem com prática e aprendizado constante, por isso estou sempre aberto a novas oportunidades que me permitam crescer profissionalmente e contribuir com soluções criativas e eficientes.</p>
+                  <p>Estou pronto para fazer parte de um time onde possa aprender, colaborar e evoluir como desenvolvedor.</p>
                 </div>
               </div>
-            </div>
-            <div class="rede-social-container">
-              <div class="rede-social-icon-box">
-                <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/anderson-gabriel-b86b84219/"><img src="img/linkedin.png" alt="Linkedin" /></a>
-                <p>Linkedin</p>
+            </section>
+            <!-- Botão de projeto do mobile-->
+            <div class="cv-btn" id="cv-btn-container-mobile"><a target="_blank" href="files/curriculo.pdf" download="Curriculo-AndersonFarias">Curriculo</a></div>
+          </article>
+        </div>
+        <!-- Galeria de projetos-->
+        <div id="galery-section" class="galery-container">
+          <section aria-label="Titulo da Galeria" class="text-container-galery">
+            <div class="text-box">
+              <div class="title-box">
+                <h1>Meus projetos</h1>
               </div>
-              <div class="rede-social-icon-box">
-                <a rel="noopener noreferrer" target="_blank" href="https://github.com/AndersonGSFarias"><img src="img/github.png" alt="Github" /></a>
-                <p>GitHub</p>
-              </div>
-              <div class="rede-social-icon-box">
-                <a rel="noopener noreferrer" target="_blank" href="mailto:anderson.gsfarias05@gmail.com?subject=Olá%20Anderson%2C%20conheci%20seu%20portfólio&body=Olá%20Anderson,%20vi%20seu%20portfólio%20e%20achei%20incrível!%20Quando%20podemos%20conversar?"><img src="img/mail.png" alt="E-mail" /></a>
-                <p>E-mail</p>
-              </div>
-              <div class="rede-social-icon-box">
-                <a rel="noopener noreferrer" target="_blank" href="https://wa.me/5511991751095"><img src="img/whatsapp.png" alt="WhatsApp" /></a>
-                <p>WhatsApp</p>
+              <div class="content-text">
+                <p>Conheça meu trabalho! Aqui tem alguns dos meus principais projetos Fique a vontade para acessar e conhecer cada um deles</p>
               </div>
             </div>
           </section>
-          <!-- Caixa de texto-->
-          <section class="about-me">
-            <!-- Titulo da caixa de texto-->
-            <div class="title-container">
-              <h1>Olá</h1>
-              <h1 id="text-typing">Bem&ndash;vindo!</h1>
-              <p>Quem sou eu e o que eu faço?</p>
-            </div>
-            <div class="text-container">
-              <!-- Botões da caixa de texto do desktop -->
-              <div class="about-me-btn-box">
-                <div id="btn-resume" class="projects-btn-container-desktop"><a href="html/em-construcao.html">Resumo</a></div>
-                <div id="btn-projects" class="projects-btn-container-desktop"><a href="html/projects.html">Projetos</a></div>
-              </div>
-              <!-- Texto do mobile -->
-              <div>
-                <p id="text-mobile">Sou desenvolvedor Front-end Júnior em busca da minha primeira oportunidade profissional. Estou focado em aplicar e expandir meus conhecimentos em tecnologias.</p>
-              </div>
-              <!-- Texto do desktop-->
-              <div id="text-desktop">
-                <p>Sou desenvolvedor Front-end Júnior, iniciando minha trajetória na área de tecnologia com entusiasmo e dedicação. Tenho focado meus estudos no desenvolvimento de interfaces modernas, responsivas e acessíveis, utilizando tecnologias como HTML, CSS, JavaScript e React.</p>
-                <p>Busco constantemente aprimorar minhas habilidades por meio de projetos pessoais, desafios práticos e atualização contínua com as tendências do mercado. Acredito que a experiência vem com prática e aprendizado constante, por isso estou sempre aberto a novas oportunidades que me permitam crescer profissionalmente e contribuir com soluções criativas e eficientes.</p>
-                <p>Estou pronto para fazer parte de um time onde possa aprender, colaborar e evoluir como desenvolvedor.</p>
-              </div>
-            </div>
+          <section aria-label="Galeria de projetos" class="galery">
+            <a class="project" rel="noopener noreferrer" target="_blank" href="https://andersongsfarias.github.io/meu-spotify/">
+              <article class="project-box">
+                <div class="project-top">
+                  <img src="../img/spotify-project.jpg" alt="Spotify Dev  - Interface visual" />
+                  <div class="overlay"></div>
+                </div>
+                <div class="project-bottom">
+                  <p>Spotify-Dev</p>
+                  <span>/</span>
+                  <div class="technologys">
+                    <img class="technology-used" src="../img/html5.png" alt="Ícone da tecnologia HTML5" />
+                    <img class="technology-used" src="../img/css3.png" alt="Ícone da tecnologia CSS3" />
+                  </div>
+                </div>
+              </article>
+            </a>
+            <a class="project" rel="noopener noreferrer" target="_blank" href="https://andersongsfarias.github.io/mechanic-page/">
+              <article class="project-box">
+                <div class="project-top">
+                  <img src="../img/mechanic-page-projects.jpg" alt="Landing Page  - Interface visual" />
+                  <div class="overlay"></div>
+                </div>
+                <div class="project-bottom">
+                  <p>Landing-Page</p>
+                  <span>/</span>
+                  <div class="technologys">
+                    <img class="technology-used" src="../img/html5.png" alt="Ícone da tecnologia HTML5" />
+                    <img class="technology-used" src="../img/css3.png" alt="Ícone da tecnologia CSS3" />
+                  </div>
+                </div>
+              </article>
+            </a>
           </section>
-          <!-- Botão de projeto do mobile-->
-          <div id="projects-btn-container-mobile" class="projects-btn-container"><a href="html/em-construcao.html">Projetos</a></div>
-        </article>
+          <div class="more-projects"><a href="html/em-construcao.html">Ver mais...</a></div>
+        </div>
       </main>
       <!-- Rodapé -->
       <footer class="footer-container">
         <div><a rel="noopener noreferrer" href="https://www.linkedin.com/in/anderson-gabriel-b86b84219/">&copy; 2025 by Anderson Farias.</a></div>
       </footer>
     </div>
-    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
