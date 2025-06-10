@@ -1,0 +1,445 @@
+/* Desktop */
+@media (min-width: 1024px) {
+  /* Caixas do meu perfil */
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 17vh;
+    margin: 0px 76px;
+  }
+  .profile-title {
+    border-bottom: #000046 1px solid;
+    margin-bottom: 50px;
+  }
+  .profile-title h1 {
+    font-family: "Outfit-Light";
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #000046;
+  }
+
+  .profile-box {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    width: 100%;
+  }
+
+  /* Remoção do botão de ver mais no desktop */
+  .more-btn,
+  .more-btn-container {
+    display: none;
+  }
+
+  .profile-about-me,
+  .profile-skills,
+  .profile-academy {
+    border: #b1b1b1 solid 1px;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    box-shadow: 8px 8px 11px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Caixa do Quem sou eu? */
+
+  .profile-about-me {
+    height: 27vh;
+    padding: 34px 38px 0px 38px;
+  }
+
+  .profile-box-title {
+    font-size: 32px;
+    color: #000046;
+    margin: 0px 0px 22px 10px;
+  }
+  .profile-text {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-text p {
+    margin-bottom: 5px;
+  }
+
+  /* Caixa das hard e soft skills */
+
+  .profile-skills {
+    display: flex;
+  }
+
+  /* Soft Skills */
+  #soft-skills {
+    border-right: #b1b1b1 2px solid;
+    padding-top: 0px;
+    width: 50%;
+  }
+
+  #soft-skills h1 {
+    margin: 34px 0px 0px 0px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .soft-skills-list ul {
+    list-style: disc;
+    font-size: 18px;
+    margin: 0px 0px 0px 57px;
+  }
+
+  .soft-skills-list ul li {
+    padding-left: 10px;
+  }
+
+  .soft-skills-list ul li::marker {
+    content: "• ";
+    font-size: 22px;
+  }
+
+  /* Hard Skills */
+
+  #hard-skill-box {
+    width: 50%;
+  }
+  #hard-skills {
+    width: 100%;
+  }
+
+  #hard-skills h1 {
+    margin: 34px 0px 0px 0px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  .my-tech {
+    margin: 15px 83px 14px 83px;
+  }
+
+  .my-tech h2 {
+    font-size: 18px;
+    font-weight: 100;
+    margin-bottom: 16px;
+  }
+
+  .technology-list {
+    display: flex;
+    flex-direction: row;
+    gap: 0px 34px;
+  }
+  .technology-icon {
+    width: 50px;
+  }
+
+  #second-technology-list {
+    margin-bottom: 34px;
+  }
+
+  /* Formação e certificações */
+  /* Graduações */
+  .profile-academy {
+    display: flex;
+  }
+  .academy-list {
+    border-right: #b1b1b1 2px solid;
+    width: 50%;
+    padding: 0px 0px 60px 0px;
+  }
+
+  .academy-list h1,
+  #more-courses h1 {
+    margin: 34px 0px 0px 0px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .academic-degree {
+    margin: 23px 0px 0px 57px;
+    border-bottom: 1px solid #000046;
+    width: 60%;
+  }
+
+  .academic-degree h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 7px;
+  }
+
+  .academic-degree p {
+    font-size: 18px;
+    font-weight: 100;
+    margin-bottom: 23px;
+  }
+
+  /* Certificados */
+  #more-courses {
+    width: 50%;
+  }
+
+  .courses-certificated {
+    margin: 23px 0px 0px 57px;
+    border-bottom: 1px solid #000046;
+    padding-bottom: 13px;
+    width: 60%;
+  }
+
+  .courses-certificated h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 7px;
+  }
+
+  .courses-certificated a {
+    font-size: 18px;
+  }
+
+  .courses-certificated a,
+  .courses-certificated a em {
+    color: #000;
+    font-style: normal;
+  }
+  .courses-certificated a em {
+    text-decoration: underline;
+  }
+
+  #more-certificate {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px 30px 0px;
+    text-decoration: underline;
+    color: #000046;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .more-certificate-btn {
+    transition: transform 0.3s ease;
+  }
+
+  .more-certificate-btn:visited {
+    color: #000046;
+  }
+
+  .more-certificate-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
+
+/* Mobile */
+/* Cabecalho */
+@media (max-width: 1023px) {
+  /* Caixas do meu perfil */
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: #d0d0ea 4px solid;
+    padding: 50px 0px;
+  }
+
+  .profile-title {
+    border-bottom: #000046 1px solid;
+    margin-bottom: 50px;
+  }
+  .profile-title h1 {
+    font-family: "Outfit-Light";
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #000046;
+  }
+
+  .profile-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px 22px;
+    width: 100%;
+  }
+
+  .profile-about-me,
+  .profile-skills,
+  .profile-academy {
+    width: 86%;
+    border: #b1b1b1 solid 1px;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    box-shadow: 8px 8px 11px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .more-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out, opacity 1s ease;
+    margin-top: 0;
+  }
+
+  .more-content.open {
+    max-height: 1000px;
+    opacity: 1;
+  }
+
+  .profile-box-title {
+    text-align: center;
+    font-size: 24px;
+    font-family: "Outfit-Light";
+    color: #000046;
+    text-transform: uppercase;
+    margin: 38px 0px 16px 0px;
+  }
+
+  .more-btn-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 10px 0px 20px 0px;
+  }
+
+  .more-btn {
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  /* Caixa do texto sobre mim */
+  .profile-about-me {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about-me-box {
+    align-items: center;
+  }
+  .profile-text {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  #more-text p {
+    margin: 10px 0px;
+  }
+
+  /* Caixa de habilidades */
+  /* Soft Skills */
+  .profile-skills {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #soft-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .soft-skills-list {
+    width: 80%;
+  }
+
+  .soft-skills-list ul {
+    font-family: "Outfit-Light";
+    font-weight: 100;
+    font-size: 20px;
+    margin: 0px 20px;
+  }
+
+  .soft-skills-list ul li::marker {
+    content: "• ";
+    font-size: 20px;
+  }
+  /* Hard Skills */
+  #hard-skills {
+    border-top: 2px solid #b1b1b1;
+    margin-top: 58px;
+  }
+  .my-tech {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .my-tech div {
+    text-align: start;
+    width: 80%;
+  }
+
+  .my-tech h2 {
+    font-family: "Outfit-Light";
+    font-weight: 100;
+    font-size: 18px;
+  }
+
+  .technology-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    width: 82%;
+    margin: 15px 0px;
+  }
+
+  .technology-icon {
+    width: 48px;
+  }
+
+  /* Formações */
+  /* Formação academica */
+  .profile-academy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 86%;
+  }
+
+  .academy-list {
+    width: 90%;
+  }
+
+  .academic-degree {
+    border-bottom: #000046 1px solid;
+    padding: 17px 0px;
+  }
+
+  .academic-degree div h2 {
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  /* Certificações */
+  #more-courses {
+    width: 90%;
+  }
+
+  .courses-list {
+    width: 100%;
+  }
+
+  .courses-certificated {
+    border-bottom: #000046 1px solid;
+    padding: 10px 0px;
+  }
+
+  .courses-certificated div h2 {
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .courses-certificated div a {
+    color: #000000;
+    text-decoration: underline;
+  }
+
+  #more-courses-btn {
+    text-decoration: underline;
+    color: #000046;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+}

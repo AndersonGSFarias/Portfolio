@@ -39,6 +39,26 @@ const mobileNavbar = new MobileNavbar(".mobile-menu", ".nav-list", ".nav-list li
 mobileNavbar.init();
 
 // =====================
+// Botão de mais conteudo
+// =====================
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".more-btn");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const card = button.closest(".box-closed");
+      const extraText = card.querySelector(".more-content");
+
+      const isOpen = extraText.classList.contains("open");
+
+      extraText.classList.toggle("open");
+      button.textContent = isOpen ? "Ver mais..." : "Ver menos...";
+    });
+  });
+});
+
+// =====================
 // Animações do ScrollReveal
 // =====================
 
@@ -49,12 +69,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Animações específicas para mobile
   if (isMobile) {
     ScrollReveal().reveal(".reveal-left", {
-      origin: "left", // direção de onde vem
-      distance: "170px", // distância
-      duration: 1200, // tempo da animação
-      delay: 0, // atraso
+      origin: "left",
+      distance: "170px",
+      delay: 0,
       easing: "ease-in-out",
-      reset: false, // se for true, repete ao voltar no scroll
+      reset: false,
     });
 
     ScrollReveal().reveal(".reveal-right", {
@@ -70,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
       origin: "bottom",
       distance: "40px",
       duration: 700,
-      interval: 200, // efeito cascata entre elementos iguais
+      interval: 200,
       reset: true,
     });
 
@@ -78,7 +97,41 @@ document.addEventListener("DOMContentLoaded", function () {
       origin: "top",
       distance: "40px",
       duration: 700,
-      interval: 200, // efeito cascata entre elementos iguais
+      interval: 200,
+      reset: true,
+    });
+
+    ScrollReveal().reveal(".disappear-left", {
+      origin: "left",
+      distance: "170px",
+      duration: 1200,
+      delay: 100,
+      easing: "ease-in-out",
+      reset: true,
+    });
+
+    ScrollReveal().reveal(".disappear-right", {
+      origin: "right",
+      distance: "170px",
+      duration: 1200,
+      delay: 100,
+      easing: "ease-in-out",
+      reset: true,
+    });
+
+    ScrollReveal().reveal(".disappear-bottom", {
+      origin: "bottom",
+      distance: "40px",
+      duration: 700,
+      interval: 200,
+      reset: true,
+    });
+
+    ScrollReveal().reveal(".disappear-top", {
+      origin: "top",
+      distance: "40px",
+      duration: 700,
+      interval: 200,
       reset: true,
     });
 
@@ -167,6 +220,39 @@ document.addEventListener("DOMContentLoaded", function () {
       duration: 700,
       delay: 0,
       easing: "ease-in-out",
+      reset: true,
+    });
+    ScrollReveal().reveal(".disappear-left", {
+      origin: "left",
+      distance: "170px",
+      duration: 1200,
+      delay: 100,
+      easing: "ease-in-out",
+      reset: true,
+    });
+
+    ScrollReveal().reveal(".disappear-right", {
+      origin: "right",
+      distance: "170px",
+      duration: 1200,
+      delay: 100,
+      easing: "ease-in-out",
+      reset: true,
+    });
+
+    ScrollReveal().reveal(".disappear-bottom", {
+      origin: "bottom",
+      distance: "40px",
+      duration: 700,
+      interval: 200,
+      reset: true,
+    });
+
+    ScrollReveal().reveal(".disappear-top", {
+      origin: "top",
+      distance: "40px",
+      duration: 700,
+      interval: 200,
       reset: true,
     });
   }

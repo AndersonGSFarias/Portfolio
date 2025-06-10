@@ -66,12 +66,11 @@
     height: 700px;
     display: flex;
     justify-content: center;
-    margin-bottom: 80px;
   }
 
   .about-me-container {
     display: flex;
-    margin: 84px 0px 0px 106px;
+    margin: 18vh 0px 0px 10vh;
     width: 100%;
   }
 
@@ -271,8 +270,8 @@
     position: absolute;
     top: 8.5vh;
     right: 0;
-    width: 30vh;
-    height: 40vh;
+    width: 25vh;
+    height: 30vh;
     background-color: rgb(0, 0, 70);
     flex-direction: column;
     align-items: center;
@@ -288,7 +287,7 @@
   .nav-list.active {
     display: flex;
     max-width: 30vh;
-    margin-right: 20px;
+    margin-right: 3vh;
   }
 
   .nav-list li {

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/profile.css" />
   </head>
   <body>
     <div class="page-reset">
@@ -27,7 +28,7 @@
           <!-- Lista do Menu-->
           <ul class="nav-list">
             <li class="list-option"><a id="index-option" rel="prefetch" href="index.html">Ínicio</a></li>
-            <li class="list-option"><a href="html/em-construcao.html">Resumo</a></li>
+            <li class="list-option"><a href="#profile-section">Perfil</a></li>
             <li class="list-option">
               <a href="#galery-section">Projetos</a>
             </li>
@@ -53,16 +54,16 @@
               <div class="technology-box">
                 <div class="technology-container-desktop">
                   <div class="technology-logo">
-                    <img src="img/html5.png" alt="html5" />
+                    <img src="img/technology-icons/html5.png" alt="html5" />
                   </div>
                   <div class="technology-logo">
-                    <img src="img/css3.png" alt="css3" />
+                    <img src="img/technology-icons/css3.png" alt="css3" />
                   </div>
                   <div class="technology-logo">
-                    <img src="img/javascript.png" alt="javascript" />
+                    <img src="img/technology-icons/javascript.png" alt="javascript" />
                   </div>
                   <div class="technology-logo">
-                    <img src="img/reactjs.png" alt="react" />
+                    <img src="img/technology-icons/reactjs.png" alt="react" />
                   </div>
                 </div>
               </div>
@@ -97,23 +98,126 @@
                 <!-- Botões da caixa de texto do desktop -->
                 <div class="about-me-btn-box">
                   <div id="btn-resume" class="projects-btn-container-desktop"><a href="files/curriculo.pdf" download="Curriculo-AndersonFarias">Meu CV</a></div>
-                  <div id="btn-projects" class="projects-btn-container-desktop"><a href="html/projects.html">Projetos</a></div>
+                  <!-- <div id="btn-projects" class="projects-btn-container-desktop"><a href="html/em-construcao.html">Projetos</a></div> -->
                 </div>
                 <!-- Texto do mobile -->
 
-                <p class="text-mobile">Sou desenvolvedor Front-end Júnior em busca da minha primeira oportunidade profissional. Estou focado em aplicar e expandir meus conhecimentos em tecnologias.</p>
+                <p class="text-mobile">Sou desenvolvedor Front-end Júnior, iniciando minha trajetória na área de tecnologia com entusiasmo e dedicação. Tenho focado meus estudos no desenvolvimento de interfaces modernas, responsivas e acessíveis, utilizando tecnologias como HTML, CSS, JavaScript e React.</p>
 
                 <!-- Texto do desktop-->
                 <div id="text-desktop">
                   <p>Sou desenvolvedor Front-end Júnior, iniciando minha trajetória na área de tecnologia com entusiasmo e dedicação. Tenho focado meus estudos no desenvolvimento de interfaces modernas, responsivas e acessíveis, utilizando tecnologias como HTML, CSS, JavaScript e React.</p>
-                  <p>Busco constantemente aprimorar minhas habilidades por meio de projetos pessoais, desafios práticos e atualização contínua com as tendências do mercado. Acredito que a experiência vem com prática e aprendizado constante, por isso estou sempre aberto a novas oportunidades que me permitam crescer profissionalmente e contribuir com soluções criativas e eficientes.</p>
                 </div>
               </div>
             </section>
             <!-- Botão de projeto do mobile-->
-            <div class="cv-btn" id="cv-btn-container-mobile"><a target="_blank" href="files/curriculo.pdf" download="Curriculo-AndersonFarias">Curriculo</a></div>
+            <div class="cv-btn" id="cv-btn-container-mobile"><a target="_blank" href="files/curriculo.pdf" download="Curriculo-AndersonFarias">Meu CV</a></div>
           </article>
         </div>
+
+        <!-- Sobre mim -->
+        <article id="profile-section" class="profile-container">
+          <div class="profile-title">
+            <h1>Meu perfil</h1>
+          </div>
+          <section class="profile-box">
+            <!-- Quem sou eu -->
+
+            <div id="about-me-box" class="profile-about-me box-closed disappear-left">
+              <h1 class="profile-box-title">Quem sou eu?</h1>
+              <div class="profile-text">
+                <p>Sou um desenvolvedor Front-end Júnior, tenho 20 anos e estou cursando Engenharia de Software mas já possuo formação técnica em Análise e Desenvolvimento de Sistemas.</p>
+                <div id="more-text" class="more-content">
+                  <p>Atualmente atuo como consultor de implantação de ERP, com foco em implantação e suporte, e paralelamente venho me dedicando ao desenvolvimento front-end, construindo projetos próprios para aprofundar meus conhecimentos em HTML, CSS, JavaScript, React e TypeScript...</p>
+                  <p>Tenho como destaque a autonomia, a organização e a facilidade em aprender novas tecnologias. Busco minha primeira oportunidade na área de desenvolvimento, onde possa crescer profissionalmente e contribuir de forma prática para soluções digitais modernas e funcionais.</p>
+                </div>
+              </div>
+              <div class="more-btn-container"><button class="more-btn">Ver mais...</button></div>
+            </div>
+            <!-- Minhas habilidades -->
+            <div class="profile-skills box-closed disappear-right">
+              <div id="soft-skills" class="skills">
+                <h1 class="profile-box-title">Soft Skills</h1>
+                <div class="soft-skills-list">
+                  <ul>
+                    <li>Organizado;</li>
+                    <li>Aprendizado rápido;</li>
+                    <li>Autonomia e proatividade;</li>
+                    <li>Trabalho em equipe e comunicação;</li>
+                    <li>Ser uma ponte entre o back-end e o UX/UI;</li>
+                    <li>Capacidade de aprender e se adaptar;</li>
+                    <li>Atenção a detalhes;</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="hard-skill-box" class="more-content">
+                <div id="hard-skills" class="skills">
+                  <h1 class="profile-box-title">Hard Skills</h1>
+                  <div class="my-tech">
+                    <div>
+                      <h2>Tecnologias que conheço:</h2>
+                    </div>
+                    <ul class="technology-list">
+                      <li><img class="technology-icon" src="img/technology-icons/html5.png" alt="html5" /></li>
+                      <li><img class="technology-icon" src="img/technology-icons/css3.png" alt="css3" /></li>
+                      <li><img class="technology-icon" src="img/technology-icons/javascript.png" alt="javascript" /></li>
+                      <li><img class="technology-icon" src="img/technology-icons/reactjs.png" alt="reactjs" /></li>
+                      <li><img class="technology-icon" src="img/technology-icons/git.png" alt="git" /></li>
+                    </ul>
+                  </div>
+                  <div class="my-tech">
+                    <div>
+                      <h2>Tecnologias que estou aprendendo:</h2>
+                    </div>
+                    <ul id="second-technology-list" class="technology-list">
+                      <li><img class="technology-icon" src="img/technology-icons/python.png" alt="python" /></li>
+                      <li><img class="technology-icon" src="img/technology-icons/angular.png" alt="angular" /></li>
+                      <li><img class="technology-icon" src="img/technology-icons/tailwind.png" alt="tailwind" /></li>
+                      <li><img class="technology-icon" src="img/technology-icons/vue-js.png" alt="vue-js" /></li>
+                      <li><img class="technology-icon" src="img/technology-icons/sass.png" alt="sass" /></li>
+                      <li><img class="technology-icon" src="img/technology-icons/bootstrap.png" alt="bootstrap" /></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="more-btn-container"><button class="more-btn">Ver mais...</button></div>
+            </div>
+            <!-- Formações -->
+            <div class="profile-academy box-closed disappear-left">
+              <div class="academy-list">
+                <h1 class="profile-box-title">Formação</h1>
+                <div class="academic-degree">
+                  <div><h2>2023 - 2024 | UNIV. CRUZEIRO DO SUL</h2></div>
+                  <div><p>Análise e desenvolvimento de Sistemas</p></div>
+                </div>
+                <div class="academic-degree">
+                  <div><h2>2023 - 2029 | UNIV. CIDADE DE SÃO PAULO</h2></div>
+                  <div><p>Engenharia de Software</p></div>
+                </div>
+              </div>
+              <div id="more-courses" class="more-content">
+                <h1 class="profile-box-title">Certificações</h1>
+                <div class="courses-list">
+                  <div class="courses-certificated">
+                    <div><h2>Alura</h2></div>
+                    <div>
+                      <a target="_blank" href="https://drive.google.com/file/d/1nbNdgPIwShGQR3cgBWbS46mrdZGC4Uep/view?usp=sharing">Imersão Alura - <em>Certificado</em></a>
+                    </div>
+                  </div>
+                  <div class="courses-certificated">
+                    <div><h2>FIAP</h2></div>
+                    <div>
+                      <a target="_blank" href="https://drive.google.com/file/d/1W556tXSm1T51nxpPVZBohcIElRV6AgAs/view?usp=sharing">Engenharia de Software - <em>Certificado</em></a>
+                    </div>
+                  </div>
+                </div>
+                <div id="more-certificate" class="more-btn-container"><a target="_blank" href="https://drive.google.com/drive/folders/1WphfTaRlzaDSkmtBcFt8pLnLehh7Txo9?usp=drive_link" id="more-courses-btn" class="more-certificate-btn">Clique aqui para ver as outras.</a></div>
+              </div>
+
+              <div class="more-btn-container"><button class="more-btn">Ver mais...</button></div>
+            </div>
+          </section>
+        </article>
         <!-- Galeria de projetos-->
         <div id="galery-section" class="galery-container">
           <section aria-label="Titulo da Galeria" class="text-container-galery">
@@ -137,8 +241,8 @@
                   <p>Spotify-Dev</p>
                   <span>/</span>
                   <div class="technologys">
-                    <img class="technology-used" src="img/html5.png" alt="Ícone da tecnologia HTML5" />
-                    <img class="technology-used" src="img/css3.png" alt="Ícone da tecnologia CSS3" />
+                    <img class="technology-used" src="img/technology-icons/html5.png" alt="Ícone da tecnologia HTML5" />
+                    <img class="technology-used" src="img/technology-icons/css3.png" alt="Ícone da tecnologia CSS3" />
                   </div>
                 </div>
               </article>
@@ -153,8 +257,8 @@
                   <p>Landing-Page</p>
                   <span>/</span>
                   <div class="technologys">
-                    <img class="technology-used" src="img/html5.png" alt="Ícone da tecnologia HTML5" />
-                    <img class="technology-used" src="img/css3.png" alt="Ícone da tecnologia CSS3" />
+                    <img class="technology-used" src="img/technology-icons/html5.png" alt="Ícone da tecnologia HTML5" />
+                    <img class="technology-used" src="img/technology-icons/css3.png" alt="Ícone da tecnologia CSS3" />
                   </div>
                 </div>
               </article>
