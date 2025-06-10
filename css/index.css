@@ -83,8 +83,7 @@
     background-color: rgba(19, 19, 149, 0.251);
     border-radius: 50px;
     box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.25);
-    width: 30%;
-    height: 90%;
+    min-width: 550px;
     max-height: 500px; /* ajuste conforme seu layout */
   }
 
