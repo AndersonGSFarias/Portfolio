@@ -262,7 +262,7 @@
   .profile-about-me,
   .profile-skills,
   .profile-academy {
-    width: 86%;
+    width: 100%;
     border: #b1b1b1 solid 1px;
     transition: all 0.3s ease;
     border-radius: 50px;
@@ -345,13 +345,13 @@
   .soft-skills-list ul {
     font-family: "Outfit-Light";
     font-weight: 100;
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin: 0px 20px;
   }
 
   .soft-skills-list ul li::marker {
     content: "• ";
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   /* Hard Skills */
   #hard-skills {
@@ -396,7 +396,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 86%;
   }
 
   .academy-list {
