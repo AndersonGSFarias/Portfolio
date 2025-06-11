@@ -1,3 +1,9 @@
+/* Ajuste de margin top no index para notebooks */
+@media (max-height: 650px) {
+  .content-container {
+    margin-top: 70px;
+  }
+}
 /* Desktop */
 @media (min-width: 1024px) {
   /* Faz com que certos elementos do mobile não apareçam no desktop */
