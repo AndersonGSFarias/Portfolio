@@ -21,14 +21,13 @@
 
   .name,
   .second-name {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .list-option a {
     position: relative;
-
     display: inline-block;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 1.3rem;
     color: #000;
     transition: transform 0.4s ease;
   }
@@ -63,14 +62,15 @@
   /* Conteudo principal */
   /* O conteúdo principal cresce, o footer vai pro fim */
   .content-container {
-    height: 700px;
+    height: 82vh;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .about-me-container {
     display: flex;
-    margin: 180px 0px 0px 106px;
+    margin: 0px 96px;
     width: 100%;
   }
 
@@ -79,12 +79,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0px 140px 0px 10px;
-    background-color: rgba(19, 19, 149, 0.251);
+    margin-right: 140px;
+    background-color: rgba(182, 182, 223, 1);
     border-radius: 50px;
     box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.25);
     min-width: 550px;
-    max-height: 500px; /* ajuste conforme seu layout */
+    max-height: 800px; /* ajuste conforme seu layout */
   }
 
   .img-container {
@@ -123,6 +123,7 @@
     border-radius: 0px 0px 50px 50px;
     width: 100%;
     height: 6rem;
+    margin-top: 40px;
   }
   .rede-social-container a {
     display: flex;
@@ -158,11 +159,11 @@
   /* Titulo da caixa de texto */
   .title-container h1 {
     font-family: "Outfit-Bold";
-    font-size: 50px;
+    font-size: 3rem;
   }
   .title-container p {
     font-family: "Outfit-Regular";
-    font-size: 20px;
+    font-size: 1.3rem;
     text-transform: uppercase;
   }
   .text-container {
@@ -245,7 +246,7 @@
 
   .name,
   .second-name {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   .mobile-menu {
@@ -298,7 +299,7 @@
     font-family: "Outfit-Regular";
     text-transform: uppercase;
     color: #ffffff;
-    font-size: 15px;
+    font-size: 0.9rem;
   }
 
   @keyframes navLinkFade {
@@ -336,7 +337,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(19, 19, 149, 0.251);
+    background-color: rgba(182, 182, 223, 0.712);
     box-shadow: 5px 2px 5px hsla(0, 0%, 0%, 0.25);
     border-radius: 50px;
     width: 85%;

@@ -1,7 +1,186 @@
-/* Desktop */
+/* Reset da página */
+main {
+  flex-grow: 1;
+}
+
+.page-reset {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Faz com que a barra de scroll só apareça quando necessario */
+html,
+body {
+  overflow-x: auto;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Barra de navegação */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+  margin: 10px 20px;
+}
+/* Titulo */
+
+header nav .title {
+  white-space: normal;
+  margin: 10px 0px 0px 10px;
+}
+
+.title .name,
+.title .second-name {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+header nav .title .name {
+  font-family: "Outfit-SemiBold";
+  color: #000000;
+}
+
+header nav .title .second-name {
+  color: #000046;
+  text-decoration: underline 1px;
+  text-underline-offset: 4px;
+}
+
+/* Conteudo principal */
+
+/* Meu nome no perfil */
+.img-box p {
+  font-family: "Outfit-SemiBold";
+  text-transform: uppercase;
+  font-size: clamp(20px, 5vw, 25px);
+  color: #000046;
+  border-bottom: 1px solid #000046;
+}
+
+/* Titulo da caixa de texto */
+
+.title-container h1 {
+  font-size: clamp(28px, 5vw, 32px);
+  text-transform: uppercase;
+  color: #000046;
+}
+/* Efeito de digitacao */
+#text-typing {
+  white-space: nowrap;
+  display: inline-block;
+  border-right: 1px solid #000046;
+  overflow: hidden;
+
+  width: 0ch;
+  animation: mark 0.7s step-end infinite, write 10s steps(11, end) infinite;
+}
+
+@keyframes mark {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes write {
+  20% {
+    width: 9.5ch;
+  }
+  80% {
+    width: 9.5ch;
+  }
+
+  85% {
+    width: 0;
+  }
+
+  115% {
+    width: 9.5ch;
+  }
+}
+/* Conteudo da caixa de texto */
+.projects-btn-container a {
+  text-transform: uppercase;
+  color: #000;
+}
+/* Contatos */
+.contact-box a {
+  color: #000;
+}
+
 @media (min-width: 1024px) {
+  /* Faz com que certos elementos do mobile não apareçam no desktop */
+  header nav .mobile-menu,
+  .content-container .about-me-container #projects-btn-container-mobile,
+  .content-container .about-me-container .about-me .text-container #text-mobile,
+  #cv-btn-container-mobile,
+  .text-mobile,
+  .content-text {
+    display: none;
+  }
+
+  /* Cabecalho */
+  header nav {
+    margin: 17px 118px 0px 76px;
+  }
+  header nav .nav-list {
+    display: flex;
+    justify-content: space-between;
+    width: 475px;
+  }
+
+  .name,
+  .second-name {
+    font-size: 1.5rem;
+  }
+  .list-option a {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: #000;
+    transition: transform 0.4s ease;
+  }
+
+  .list-option a:hover {
+    transform: scale(1.2);
+  }
+
+  .list-option a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #000;
+    transition: width 0.3s ease;
+  }
+
+  #index-option::after {
+    background-color: #0b2b67;
+  }
+
+  .list-option a:hover::after {
+    width: 100%;
+  }
+
+  #index-option {
+    color: #0b2b67;
+  }
+
+  .name,
+  .second-name {
+    font-size: 1.5rem;
+  }
+
   /* Conteudo principal */
   /* Ajuste da altura da página de projetos */
+  #galery-projects-page {
+    height: calc(100vh - 93px);
+  }
 
   .galery-container {
     display: flex;
@@ -23,10 +202,6 @@
     text-transform: uppercase;
     color: #000046;
   }
-  .content-text{
-    display: none;
-  }
-
   /* Projetos da galeria */
   .galery {
     width: 100%;
@@ -37,18 +212,16 @@
     margin-bottom: 30px;
   }
 
-  .galery a {
-    transition: transform 0.4s ease;
-  }
-  .galery a:hover {
-    transform: scale(1.1);
-  }
-
   .project-box {
     width: 100%;
     height: 100%;
     border-radius: 30px;
     box-shadow: 5px 2px 5px hsla(0, 0%, 0%, 0.25);
+    transition: transform 0.4s ease;
+  }
+
+  .project-box:hover {
+    transform: scale(1.1);
   }
 
   .project-top {
@@ -145,22 +318,111 @@
   body {
     overflow-x: hidden;
   }
+  header {
+    z-index: 1000; /* para ficar acima dos outros elementos */
+  }
+
+  .content-container {
+    background-image: url(../../img/backgrund-mobile.png);
+    background-size: cover;
+  }
+  .projects-btn-container-desktop,
+  #text-desktop,
+  .contacts-container-desktop,
+  .rede-social-icon-box p {
+    display: none; /* Faz com que certos elementos do desktop não apareçam no mobile */
+  }
+
+  .name,
+  .second-name {
+    font-size: 1.5rem;
+  }
+
+  .mobile-menu {
+    display: flex;
+    justify-items: center;
+    align-content: center;
+  }
+
+  .menu-icon {
+    color: #ffffff;
+    width: 35px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .menu-icon:hover {
+    cursor: pointer;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 8.5vh;
+    right: 0;
+    width: 25vh;
+    height: 30vh;
+    background-color: rgb(0, 0, 70);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 0;
+    padding: 0;
+    border: none;
+    transition: max-width 0.3s ease, padding 0.3s ease;
+  }
+
+  .nav-list.active {
+    display: flex;
+    max-width: 30vh;
+    margin-right: 3vh;
+  }
+
+  .nav-list li {
+    display: flex;
+    margin: 0px;
+    opacity: 0;
+  }
+  .nav-list a {
+    font-family: "Outfit-Regular";
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 0.9rem;
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .mobile-menu.active .menu-icon {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
 
   /* Galeria de projetos */
+  #galery-projects-page {
+    height: auto;
+  }
+
   .galery-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    border-top: #d0d0ea 4px solid;
-    border-bottom: #d0d0ea 4px solid;
   }
 
   /* Titulo e texto */
   .text-container-galery {
     width: 88%;
-    text-align: center;
     height: 193px;
     margin-top: 30px;
   }
@@ -188,17 +450,18 @@
   .content-text p {
     font-family: "Outfit-Light";
     font-size: 1.1rem;
+    margin: 0px 20px;
+    text-align: center;
   }
 
   /* Projetos da galeria */
 
   .galery {
-    width: 100%; /* <-- ESSENCIAL para liberar espaço horizontal */
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, 333px);
     gap: 60px 60px;
-    justify-content: center; /* centraliza os cards quando sobra espaço */
-    margin-bottom: 30px;
+    justify-content: center;
   }
 
   .project-box {
@@ -242,7 +505,7 @@
   }
 
   .project-bottom p,
-  span {
+  .project-bottom span {
     text-transform: uppercase;
     color: #000046;
     font-family: "Outfit-Light";
@@ -288,6 +551,7 @@
     width: 100%;
     height: 56px;
     background-color: #000046;
+    margin-top: 60px;
   }
   .footer-container a {
     color: #fff;

@@ -7,6 +7,7 @@
     align-items: start;
     padding-top: 17vh;
     margin: 0px 76px;
+    margin: 0px 76px 40px;
   }
   .profile-title {
     border-bottom: #000046 1px solid;
@@ -14,7 +15,7 @@
   }
   .profile-title h1 {
     font-family: "Outfit-Light";
-    font-size: 32px;
+    font-size: 2rem;
     text-transform: uppercase;
     color: #000046;
   }
@@ -49,12 +50,12 @@
   }
 
   .profile-box-title {
-    font-size: 32px;
+    font-size: 2rem;
     color: #000046;
     margin: 0px 0px 22px 10px;
   }
   .profile-text {
-    font-size: 18px;
+    font-size: 1.1rem;
     display: flex;
     flex-direction: column;
   }
@@ -84,17 +85,17 @@
 
   .soft-skills-list ul {
     list-style: disc;
-    font-size: 18px;
+    font-size: 1.1rem;
     margin: 0px 0px 0px 57px;
   }
 
   .soft-skills-list ul li {
-    padding-left: 10px;
+    padding-left: 0.6rem;
   }
 
   .soft-skills-list ul li::marker {
     content: "• ";
-    font-size: 22px;
+    font-size: 1.2rem;
   }
 
   /* Hard Skills */
@@ -118,7 +119,7 @@
   }
 
   .my-tech h2 {
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: 100;
     margin-bottom: 16px;
   }
@@ -161,13 +162,13 @@
   }
 
   .academic-degree h2 {
-    font-size: 20px;
+    font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: 7px;
   }
 
   .academic-degree p {
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: 100;
     margin-bottom: 23px;
   }
@@ -185,13 +186,13 @@
   }
 
   .courses-certificated h2 {
-    font-size: 20px;
+    font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: 7px;
   }
 
   .courses-certificated a {
-    font-size: 18px;
+    font-size: 1.1rem;
   }
 
   .courses-certificated a,
@@ -209,7 +210,7 @@
     margin: 30px 0px 30px 0px;
     text-decoration: underline;
     color: #000046;
-    font-size: 20px;
+    font-size: 1.3rem;
     background-color: rgba(255, 255, 255, 0);
   }
 
@@ -236,7 +237,7 @@
     flex-direction: column;
     align-items: center;
     border-top: #d0d0ea 4px solid;
-    padding: 50px 0px;
+    padding: 40px;
   }
 
   .profile-title {
@@ -245,7 +246,7 @@
   }
   .profile-title h1 {
     font-family: "Outfit-Light";
-    font-size: 32px;
+    font-size: 2rem;
     text-transform: uppercase;
     color: #000046;
   }
@@ -283,7 +284,7 @@
 
   .profile-box-title {
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: "Outfit-Light";
     color: #000046;
     text-transform: uppercase;
@@ -299,7 +300,7 @@
   }
 
   .more-btn {
-    font-size: 20px;
+    font-size: 1.3rem;
     background-color: rgba(255, 255, 255, 0);
   }
 
@@ -344,13 +345,13 @@
   .soft-skills-list ul {
     font-family: "Outfit-Light";
     font-weight: 100;
-    font-size: 20px;
+    font-size: 1.3rem;
     margin: 0px 20px;
   }
 
   .soft-skills-list ul li::marker {
     content: "• ";
-    font-size: 20px;
+    font-size: 1.3rem;
   }
   /* Hard Skills */
   #hard-skills {
@@ -372,7 +373,7 @@
   .my-tech h2 {
     font-family: "Outfit-Light";
     font-weight: 100;
-    font-size: 18px;
+    font-size: 1.1rem;
   }
 
   .technology-list {
@@ -439,7 +440,7 @@
   #more-courses-btn {
     text-decoration: underline;
     color: #000046;
-    font-size: 20px;
+    font-size: 1.3rem;
     background-color: rgba(255, 255, 255, 0);
   }
 }

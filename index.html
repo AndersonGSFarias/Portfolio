@@ -4,15 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="shortcut icon" href="img/ag-logo.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/favicon/ag-logo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/projects.css" />
     <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/contact.css" />
   </head>
   <body>
     <div class="page-reset">
+      <!-- Cabeçalho -->
       <header>
         <!-- Barra de Navegacao-->
         <nav>
@@ -23,7 +25,7 @@
           </a>
           <!-- Botao de menu-->
           <div class="mobile-menu">
-            <img class="menu-icon" src="img/hamburguer.png" alt="menu-icon" />
+            <img class="menu-icon" src="img/icons/hamburguer.png" alt="menu-icon" />
           </div>
           <!-- Lista do Menu-->
           <ul class="nav-list">
@@ -33,7 +35,7 @@
               <a href="#galery-section">Projetos</a>
             </li>
             <li class="list-option">
-              <a href="html/em-construcao.html">Contato</a>
+              <a href="#contact-section">Contato</a>
             </li>
           </ul>
         </nav>
@@ -69,20 +71,20 @@
               </div>
               <div class="rede-social-container">
                 <div class="rede-social-icon-box">
-                  <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/anderson-gabriel-b86b84219/"><img src="img/linkedin.png" alt="Linkedin" /></a>
-                  <p>Linkedin</p>
+                  <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/anderson-gabriel-b86b84219/"><img src="img/icons/linkedin.png" alt="Linkedin" /></a>
+                  <!-- <p>Linkedin</p> -->
                 </div>
                 <div class="rede-social-icon-box">
-                  <a rel="noopener noreferrer" target="_blank" href="https://github.com/AndersonGSFarias"><img src="img/github.png" alt="Github" /></a>
-                  <p>GitHub</p>
+                  <a rel="noopener noreferrer" target="_blank" href="https://github.com/AndersonGSFarias"><img src="img/icons/github.png" alt="Github" /></a>
+                  <!-- <p>GitHub</p> -->
                 </div>
                 <div class="rede-social-icon-box">
-                  <a rel="noopener noreferrer" target="_blank" href="mailto:anderson.gsfarias05@gmail.com?subject=Olá%20Anderson%2C%20conheci%20seu%20portfólio&body=Olá%20Anderson,%20vi%20seu%20portfólio%20e%20achei%20incrível!%20Quando%20podemos%20conversar?"><img src="img/mail.png" alt="E-mail" /></a>
-                  <p>E-mail</p>
+                  <a rel="noopener noreferrer" target="_blank" href="mailto:anderson.gsfarias05@gmail.com?subject=Olá%20Anderson%2C%20conheci%20seu%20portfólio&body=Olá%20Anderson,%20vi%20seu%20portfólio%20e%20achei%20incrível!%20Quando%20podemos%20conversar?"><img src="img/icons/mail.png" alt="E-mail" /></a>
+                  <!-- <p>E-mail</p> -->
                 </div>
                 <div class="rede-social-icon-box">
-                  <a rel="noopener noreferrer" target="_blank" href="https://wa.me/5511991751095"><img src="img/whatsapp.png" alt="WhatsApp" /></a>
-                  <p>WhatsApp</p>
+                  <a rel="noopener noreferrer" target="_blank" href="https://wa.me/5511991751095"><img src="img/icons/whatsapp.png" alt="WhatsApp" /></a>
+                  <!-- <p>WhatsApp</p> -->
                 </div>
               </div>
             </section>
@@ -114,7 +116,6 @@
             <div class="cv-btn" id="cv-btn-container-mobile"><a target="_blank" href="files/curriculo.pdf" download="Curriculo-AndersonFarias">Meu CV</a></div>
           </article>
         </div>
-
         <!-- Sobre mim -->
         <article id="profile-section" class="profile-container">
           <div class="profile-title">
@@ -122,34 +123,35 @@
           </div>
           <section class="profile-box">
             <!-- Quem sou eu -->
-
             <div id="about-me-box" class="profile-about-me box-closed disappear-left">
               <h1 class="profile-box-title">Quem sou eu?</h1>
               <div class="profile-text">
                 <p>Sou um desenvolvedor Front-end Júnior, tenho 20 anos e estou cursando Engenharia de Software mas já possuo formação técnica em Análise e Desenvolvimento de Sistemas.</p>
                 <div id="more-text" class="more-content">
-                  <p>Atualmente atuo como consultor de implantação de ERP, com foco em implantação e suporte, e paralelamente venho me dedicando ao desenvolvimento front-end, construindo projetos próprios para aprofundar meus conhecimentos em HTML, CSS, JavaScript, React e TypeScript...</p>
-                  <p>Tenho como destaque a autonomia, a organização e a facilidade em aprender novas tecnologias. Busco minha primeira oportunidade na área de desenvolvimento, onde possa crescer profissionalmente e contribuir de forma prática para soluções digitais modernas e funcionais.</p>
+                  <p>Atualmente atuo como consultor de implantação e suporte de ERP, paralelamente venho me dedicando ao desenvolvimento front-end, construindo projetos próprios para aprofundar meus conhecimentos em HTML, CSS, JavaScript, React e TypeScript.</p>
+                  <p>Tenho como destaque a autonomia, a organização e a facilidade em aprender novas tecnologias. Busco minha primeira oportunidade na área de desenvolvimento, onde eu posso crescer profissionalmente e contribuir de forma prática para soluções digitais modernas e funcionais.</p>
                 </div>
               </div>
               <div class="more-btn-container"><button class="more-btn">Ver mais...</button></div>
             </div>
             <!-- Minhas habilidades -->
             <div class="profile-skills box-closed disappear-right">
+              <!-- Soft Skills -->
               <div id="soft-skills" class="skills">
                 <h1 class="profile-box-title">Soft Skills</h1>
                 <div class="soft-skills-list">
                   <ul>
-                    <li>Organizado;</li>
+                    <li>Organização;</li>
                     <li>Aprendizado rápido;</li>
                     <li>Autonomia e proatividade;</li>
                     <li>Trabalho em equipe e comunicação;</li>
                     <li>Ser uma ponte entre o back-end e o UX/UI;</li>
                     <li>Capacidade de aprender e se adaptar;</li>
-                    <li>Atenção a detalhes;</li>
+                    <li>Atenção a detalhes.</li>
                   </ul>
                 </div>
               </div>
+              <!-- Hard Skills -->
               <div id="hard-skill-box" class="more-content">
                 <div id="hard-skills" class="skills">
                   <h1 class="profile-box-title">Hard Skills</h1>
@@ -195,6 +197,7 @@
                   <div><p>Engenharia de Software</p></div>
                 </div>
               </div>
+              <!-- Certificações -->
               <div id="more-courses" class="more-content">
                 <h1 class="profile-box-title">Certificações</h1>
                 <div class="courses-list">
@@ -213,13 +216,12 @@
                 </div>
                 <div id="more-certificate" class="more-btn-container"><a target="_blank" href="https://drive.google.com/drive/folders/1WphfTaRlzaDSkmtBcFt8pLnLehh7Txo9?usp=drive_link" id="more-courses-btn" class="more-certificate-btn">Clique aqui para ver as outras.</a></div>
               </div>
-
               <div class="more-btn-container"><button class="more-btn">Ver mais...</button></div>
             </div>
           </section>
         </article>
         <!-- Galeria de projetos-->
-        <div id="galery-section" class="galery-container">
+        <article id="galery-section" class="galery-container">
           <section aria-label="Titulo da Galeria" class="text-container-galery">
             <div class="text-box">
               <div class="title-box">
@@ -234,7 +236,7 @@
             <a class="project" rel="noopener noreferrer" target="_blank" href="https://andersongsfarias.github.io/meu-spotify/">
               <article class="project-box">
                 <div class="project-top">
-                  <img src="img/spotify-project.jpg" alt="Spotify Dev  - Interface visual" />
+                  <img src="img/projects/spotify-project.jpg" alt="Spotify Dev  - Interface visual" />
                   <div class="overlay"></div>
                 </div>
                 <div class="project-bottom">
@@ -250,7 +252,7 @@
             <a class="project" rel="noopener noreferrer" target="_blank" href="https://andersongsfarias.github.io/mechanic-page/">
               <article class="project-box">
                 <div class="project-top">
-                  <img src="img/mechanic-page-projects.jpg" alt="Landing Page  - Interface visual" />
+                  <img src="img/projects/mechanic-page-projects.jpg" alt="Landing Page  - Interface visual" />
                   <div class="overlay"></div>
                 </div>
                 <div class="project-bottom">
@@ -264,8 +266,34 @@
               </article>
             </a>
           </section>
-          <div class="more-projects"><a href="html/em-construcao.html">Ver mais...</a></div>
-        </div>
+          <div class="more-projects"><a href="html/projects.html">Ver mais...</a></div>
+        </article>
+        <!-- Formulário de contato -->
+        <article class="forms-section" id="contact-section">
+          <div class="form-title"><h1>Entre em contato</h1></div>
+          <div class="stripe"></div>
+          <div class="form-container">
+            <form class="contact-form" action="" onsubmit="sendMessage(event)">
+              <lab class="input-title" for="name">Nome:</lab>
+              <input type="text" id="name" name="name" placeholder="Digite seu nome" />
+              <lab class="input-title" for="service">Serviço:</lab>
+              <select class="input-service" name="service" id="service" required>
+                <option id="select-service" value="selecione" disabled selected hidden>Selecione um serviço</option>
+                <option value="landing page">Landing Page</option>
+                <option value="site institucional">Site Institucional</option>
+                <option value="portfolio profissional">Portfólio Profissional</option>
+                <option value="blog ou site pessoal">Blog ou Site Pessoal</option>
+                <option value="reformulação de site">Reformulação de Site</option>
+                <option value="responsividade e performance">Melhorias de Responsividade e Performance</option>
+                <option value="animacoes e interações">Animações e Interações</option>
+                <option value="outro">Outro (especificar na mensagem)</option>
+              </select>
+              <lab class="input-title" for="message">Sua mensagem:</lab>
+              <textarea id="message" name="message" rows="8" placeholder="Mande uma mensagem para mim!"></textarea>
+              <div class="send-btn-container"><button class="send-btn" type="submit">Enviar</button></div>
+            </form>
+          </div>
+        </article>
       </main>
       <!-- Rodapé -->
       <footer class="footer-container">

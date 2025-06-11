@@ -166,7 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
       origin: "left", // direção de onde vem
       distance: "70px", // distância
       duration: 1200, // tempo da animação
-      delay: 300, // atraso
       easing: "ease-in-out",
       reset: false, // se for true, repete ao voltar no scroll
     });
@@ -175,7 +174,6 @@ document.addEventListener("DOMContentLoaded", function () {
       origin: "right",
       distance: "70px",
       duration: 1200,
-      delay: 300,
       easing: "ease-in-out",
       reset: false,
     });
@@ -222,20 +220,36 @@ document.addEventListener("DOMContentLoaded", function () {
       easing: "ease-in-out",
       reset: true,
     });
+
+    ScrollReveal().reveal(".forms-section", {
+      origin: "bottom",
+      distance: "20px",
+      delay: 100,
+      duration: 2000,
+      interval: 200,
+      reset: true,
+    });
+
+    ScrollReveal().reveal(".profile-title", {
+      origin: "left",
+      distance: "170px",
+      duration: 1200,
+      easing: "ease-in-out",
+      reset: true,
+    });
+
     ScrollReveal().reveal(".disappear-left", {
       origin: "left",
       distance: "170px",
       duration: 1200,
-      delay: 100,
       easing: "ease-in-out",
       reset: true,
     });
 
     ScrollReveal().reveal(".disappear-right", {
       origin: "right",
-      distance: "170px",
+      distance: "70px",
       duration: 1200,
-      delay: 100,
       easing: "ease-in-out",
       reset: true,
     });
@@ -257,4 +271,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-more - projects;
+
+// =====================
+// Envio de formulário
+// =====================
+
+function sendMessage() {
+  event.preventDefault();
+  const phoneNumber = "5511991751095";
+  const name = document.getElementById("name").value;
+  const service = document.getElementById("service").value;
+  const message = document.getElementById("message").value;
+
+  if (!name) {
+    return alert("Acho que esqueceu de escrever seu nome");
+  }
+
+  if (!message) {
+    return alert("Escreva sua mensagem pra mim!");
+  }
+
+  const text = `Olá, tudo bem? \nMeu nome é ${name} e gostaria de falar sobre um ${service}.\n\n${message}`;
+
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+
+  window.open(url, "_blank");
+}
