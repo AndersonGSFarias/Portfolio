@@ -221,12 +221,12 @@ document.addEventListener("DOMContentLoaded", function () {
       reset: true,
     });
 
-    ScrollReveal().reveal(".forms-section", {
+    ScrollReveal().reveal(".disappear-form", {
       origin: "bottom",
-      distance: "20px",
-      delay: 100,
-      duration: 2000,
-      interval: 200,
+      distance: "40px",
+      duration: 700,
+      delay: 500,
+      easing: "ease-in-out",
       reset: true,
     });
 
