@@ -140,14 +140,14 @@ document.addEventListener("DOMContentLoaded", function () {
       distance: "40px",
       duration: 1700,
       delay: 0,
-      reset: true,
+      reset: false,
     });
     ScrollReveal().reveal(".project", {
       origin: "bottom",
       distance: "40px",
       duration: 1700,
       delay: 0,
-      reset: true,
+      reset: false,
     });
 
     ScrollReveal().reveal(".cv-btn", {
@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", function () {
       distance: "170px",
       duration: 1200,
       easing: "ease-in-out",
-      reset: true,
+      reset: false,
     });
 
     ScrollReveal().reveal(".disappear-left", {
