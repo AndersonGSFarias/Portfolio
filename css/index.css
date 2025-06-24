@@ -212,6 +212,449 @@
     background-color: #000046;
     color: #fff;
   }
+
+  /* Caixas do meu perfil */
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 17vh;
+    margin: 0px 76px 40px;
+  }
+  .profile-title {
+    border-bottom: #000046 1px solid;
+    margin-bottom: 50px;
+  }
+  .profile-title h1 {
+    font-family: "Outfit-Light";
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #000046;
+  }
+
+  .profile-box {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    width: 100%;
+  }
+
+  /* Remoção do botão de ver mais no desktop */
+  .more-btn,
+  .more-btn-container {
+    display: none;
+  }
+
+  .profile-about-me,
+  .profile-skills,
+  .profile-academy {
+    border: #b1b1b1 solid 1px;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    box-shadow: 8px 8px 11px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Caixa do Quem sou eu? */
+
+  .profile-about-me {
+    height: 270px;
+    padding: 34px 38px 0px 38px;
+  }
+
+  .profile-box-title {
+    font-size: 2rem;
+    color: #000046;
+    margin: 0px 0px 22px 10px;
+  }
+  .profile-text {
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-text p {
+    margin-bottom: 5px;
+  }
+
+  /* Caixa das hard e soft skills */
+
+  .profile-skills {
+    display: flex;
+  }
+
+  /* Soft Skills */
+  #soft-skills {
+    border-right: #b1b1b1 2px solid;
+    padding-top: 0px;
+    width: 50%;
+  }
+
+  #soft-skills h1 {
+    margin: 34px 0px 0px 0px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .soft-skills-list ul {
+    list-style: disc;
+    font-size: 1.1rem;
+    margin: 0px 0px 0px 57px;
+  }
+
+  .soft-skills-list ul li {
+    padding-left: 0.6rem;
+  }
+
+  .soft-skills-list ul li::marker {
+    content: "• ";
+    font-size: 1.2rem;
+  }
+
+  /* Hard Skills */
+
+  #hard-skill-box {
+    width: 50%;
+  }
+  #hard-skills {
+    width: 100%;
+  }
+
+  #hard-skills h1 {
+    margin: 34px 0px 0px 0px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  .my-tech {
+    margin: 15px 83px 14px 83px;
+  }
+
+  .my-tech h2 {
+    font-size: 1.1rem;
+    font-weight: 100;
+    margin-bottom: 16px;
+  }
+
+  .technology-list {
+    display: flex;
+    flex-direction: row;
+    gap: 0px 34px;
+  }
+  .technology-icon {
+    width: 50px;
+  }
+
+  #second-technology-list {
+    margin-bottom: 34px;
+  }
+
+  /* Formação e certificações */
+  /* Graduações */
+  .profile-academy {
+    display: flex;
+  }
+  .academy-list {
+    border-right: #b1b1b1 2px solid;
+    width: 50%;
+    padding: 0px 0px 60px 0px;
+  }
+
+  .academy-list h1,
+  #more-courses h1 {
+    margin: 34px 0px 0px 0px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .academic-degree {
+    margin: 23px 0px 0px 57px;
+    border-bottom: 1px solid #000046;
+    width: 60%;
+  }
+
+  .academic-degree h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 7px;
+  }
+
+  .academic-degree p {
+    font-size: 1.1rem;
+    font-weight: 100;
+    margin-bottom: 23px;
+  }
+
+  /* Certificados */
+  #more-courses {
+    width: 50%;
+  }
+
+  .courses-certificated {
+    margin: 23px 0px 0px 57px;
+    border-bottom: 1px solid #000046;
+    padding-bottom: 13px;
+    width: 60%;
+  }
+
+  .courses-certificated h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 7px;
+  }
+
+  .courses-certificated a {
+    font-size: 1.1rem;
+  }
+
+  .courses-certificated a,
+  .courses-certificated a em {
+    color: #000;
+    font-style: normal;
+  }
+  .courses-certificated a em {
+    text-decoration: underline;
+  }
+
+  #more-certificate {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px 30px 0px;
+    text-decoration: underline;
+    color: #000046;
+    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .more-certificate-btn {
+    transition: transform 0.3s ease;
+  }
+
+  .more-certificate-btn:visited {
+    color: #000046;
+  }
+
+  .more-certificate-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  /* Ajuste da altura da página de projetos */
+
+  .galery-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 118px 80px 76px;
+  }
+
+  .title-box {
+    border-bottom: #000046 1px solid;
+    margin-bottom: 20px;
+    width: 250px;
+    text-align: center;
+    margin: 60px 0px;
+  }
+
+  .title-box h1 {
+    font-family: "Outfit-Light";
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #000046;
+  }
+  .content-text {
+    display: none;
+  }
+
+  /* Projetos da galeria */
+  .galery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 333px);
+    gap: 60px 60px;
+    /* justify-content: center; Alinha o elemento no meio depois que tiver mais conteudo */
+    margin-bottom: 30px;
+  }
+
+  .galery a {
+    transition: transform 0.4s ease;
+  }
+  .galery a:hover {
+    transform: scale(1.1);
+  }
+
+  .project-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    box-shadow: 5px 2px 5px hsla(0, 0%, 0%, 0.25);
+  }
+
+  .project-top {
+    position: relative;
+    height: 148px;
+  }
+
+  .project-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 30px 30px 0px 0px;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 19, 149, 0.336);
+    pointer-events: none;
+    border-radius: 30px 30px 0px 0px;
+  }
+
+  .project-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 62px;
+    border: 1px solid rgba(19, 19, 149, 0.3);
+    border-radius: 0px 0px 30px 30px;
+  }
+
+  .project-bottom p {
+    text-transform: uppercase;
+    color: #000046;
+    font-size: 1.3rem;
+    font-family: "Outfit-Light";
+  }
+
+  .project-bottom span {
+    margin: 0px 6px;
+    font-size: 1.3rem;
+  }
+
+  .technologys {
+    display: flex;
+    gap: 10px;
+  }
+  .technology-used {
+    width: 25px;
+  }
+
+  .more-projects {
+    display: flex;
+    justify-content: end;
+    margin: 16px 0px 40px 0px;
+  }
+
+  .more-projects a {
+    font-family: "Outfit-Regular";
+    color: #000046;
+    font-size: 1.3rem;
+    letter-spacing: 1;
+    transition: transform 0.3s ease;
+    border-bottom: #000046 1px solid;
+  }
+  .more-projects a:hover {
+    transform: scale(1.2);
+  }
+  /* Corpo do formulário */
+  .forms-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 850px;
+    position: relative;
+  }
+  .stripe {
+    position: absolute;
+    top: 52%;
+    left: 0;
+    width: 100%;
+    height: 300px; /* ajuste conforme necessário */
+    background-color: rgba(19, 19, 149, 0.3);
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+  .form-title {
+    border-bottom: #000046 solid 1px;
+    margin-bottom: 100px;
+  }
+
+  .forms-section div h1 {
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-family: "Outfit-Light";
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #000046;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    color: #fff;
+    background-color: #000046;
+    border-radius: 30px;
+    padding: 20px 30px 30px 30px;
+    z-index: 1;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .input-title {
+    font-size: 20px;
+    margin: 21px 42px 6px 11px;
+    font-weight: bold;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 10px;
+    padding: 5px 5px 5px 10px;
+    font-family: "Outfit";
+    font-size: 16px;
+    margin: 0;
+    transition: none;
+    background: #fff;
+    box-sizing: border-box;
+    color: #000;
+  }
+
+  .contact-form input::placeholder,
+  .contact-form select::placeholder,
+  .contact-form textarea::placeholder {
+    color: #000;
+  }
+  .contact-form textarea {
+    padding: 10px 15px 10px 15px;
+  }
+
+  /* Botão de enviar formulário */
+  .send-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .send-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+  }
+  .send-btn:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+
   /* Rodapé */
   .footer-container {
     height: 36px;
@@ -440,6 +883,452 @@
   #cv-btn-container-mobile a {
     text-transform: uppercase;
     color: #000;
+  }
+
+  /* Caixas do meu perfil */
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: #d0d0ea 4px solid;
+    padding: 40px;
+  }
+
+  .profile-title {
+    border-bottom: #000046 1px solid;
+    margin-bottom: 50px;
+  }
+  .profile-title h1 {
+    font-family: "Outfit-Light";
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #000046;
+  }
+
+  .profile-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px 22px;
+    width: 100%;
+  }
+
+  .profile-about-me,
+  .profile-skills,
+  .profile-academy {
+    width: 100%;
+    border: #b1b1b1 solid 1px;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    box-shadow: 8px 8px 11px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .more-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out, opacity 1s ease;
+    margin-top: 0;
+  }
+
+  .more-content.open {
+    max-height: 1000px;
+    opacity: 1;
+  }
+
+  .profile-box-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Outfit-Light";
+    color: #000046;
+    text-transform: uppercase;
+    margin: 38px 0px 16px 0px;
+  }
+
+  .more-btn-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 30px 0px 20px 0px;
+  }
+
+  .more-btn {
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0);
+    color: #000046;
+  }
+
+  /* Caixa do texto sobre mim */
+  .profile-about-me {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about-me-box {
+    align-items: center;
+  }
+  .profile-text {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  #more-text p {
+    margin: 10px 0px;
+  }
+
+  /* Caixa de habilidades */
+  /* Soft Skills */
+  .profile-skills {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #soft-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .soft-skills-list {
+    width: 80%;
+  }
+
+  .soft-skills-list ul {
+    font-family: "Outfit-Light";
+    font-weight: 100;
+    font-size: 1rem;
+    margin: 0px 20px;
+  }
+
+  .soft-skills-list ul li::marker {
+    content: "• ";
+    font-size: 1.2rem;
+  }
+  /* Hard Skills */
+  #hard-skills {
+    border-top: 2px solid #b1b1b1;
+    margin-top: 58px;
+  }
+  .my-tech {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .my-tech div {
+    text-align: start;
+    width: 80%;
+  }
+
+  .my-tech h2 {
+    font-family: "Outfit-Light";
+    font-weight: 100;
+    font-size: 1.1rem;
+  }
+
+  .technology-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    width: 82%;
+    margin: 15px 0px;
+  }
+
+  .technology-icon {
+    width: 48px;
+  }
+
+  /* Formações */
+  /* Formação academica */
+  .profile-academy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .academy-list {
+    width: 90%;
+  }
+
+  .academic-degree {
+    border-bottom: #000046 1px solid;
+    padding: 17px 0px;
+  }
+
+  .academic-degree div h2 {
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  /* Certificações */
+  #more-courses {
+    width: 90%;
+  }
+
+  .courses-list {
+    width: 100%;
+  }
+
+  .courses-certificated {
+    border-bottom: #000046 1px solid;
+    padding: 10px 0px;
+  }
+
+  .courses-certificated div h2 {
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .courses-certificated div a {
+    color: #000000;
+    text-decoration: underline;
+  }
+
+  #more-courses-btn {
+    text-decoration: underline;
+    color: #000046;
+    font-size: 1.1rem;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Galeria de projetos */
+  .galery-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-top: #d0d0ea 4px solid;
+    border-bottom: #d0d0ea 4px solid;
+  }
+
+  /* Titulo e texto */
+  .text-container-galery {
+    width: 88%;
+    text-align: center;
+    height: 193px;
+    margin-top: 30px;
+  }
+  .text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .title-box {
+    border-bottom: #000046 1px solid;
+    margin-bottom: 20px;
+  }
+  .title-box h1 {
+    font-family: "Outfit-Light";
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #000046;
+  }
+  .content-text {
+    width: 350px;
+  }
+
+  .content-text p {
+    font-family: "Outfit-Light";
+    font-size: 1.1rem;
+  }
+
+  /* Projetos da galeria */
+
+  .galery {
+    width: 100%; /* <-- ESSENCIAL para liberar espaço horizontal */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 333px);
+    gap: 60px 60px;
+    justify-content: center; /* centraliza os cards quando sobra espaço */
+    margin-bottom: 30px;
+  }
+
+  .project-box {
+    width: 100%;
+    height: 210px;
+    border-radius: 30px;
+    box-shadow: 5px 2px 5px hsla(0, 0%, 0%, 0.25);
+  }
+
+  .project-top {
+    position: relative;
+    height: 148px;
+  }
+
+  .project-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 30px 30px 0px 0px;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 19, 149, 0.336);
+    pointer-events: none;
+    border-radius: 30px 30px 0px 0px;
+  }
+
+  .project-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 62px;
+    border: 1px solid rgba(19, 19, 149, 0.3);
+    border-radius: 0px 0px 30px 30px;
+  }
+
+  .project-bottom p,
+  span {
+    text-transform: uppercase;
+    color: #000046;
+    font-family: "Outfit-Light";
+  }
+
+  .project-bottom span {
+    margin: 0px 6px;
+    font-size: 1.3rem;
+  }
+
+  .technologys {
+    display: flex;
+    gap: 10px;
+  }
+  .technology-used {
+    width: 25px;
+  }
+
+  /* Ancora de ver mais */
+  .more-projects {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    border-bottom: #000046 1px solid;
+    transition: transform 0.3s ease;
+  }
+
+  .more-projects:hover {
+    transform: scale(1.2);
+  }
+
+  .more-projects a {
+    font-family: "Outfit-Regular";
+    color: #000046;
+    font-size: 1.3rem;
+    letter-spacing: 1;
+  }
+
+   /* Corpo do formulário */
+  .forms-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 700px;
+    position: relative;
+  }
+  .stripe {
+    position: absolute;
+    top: 55%;
+    left: 0;
+    width: 100%;
+    height: 300px; /* ajuste conforme necessário */
+    background-color: rgba(19, 19, 149, 0.3); /* roxo translúcido */
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+
+  .form-title {
+    border-bottom: #000046 solid 1px;
+    margin-bottom: 50px;
+  }
+
+  .forms-section div h1 {
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-family: "Outfit-Light";
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #000046;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    color: #fff;
+    background-color: #000046;
+    border-radius: 30px;
+    padding: 13px 30px 40px 30px;
+    z-index: 1;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-title {
+    font-size: 20px;
+    margin: 11px 42px 6px 11px;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 20px;
+    padding: 5px 5px 5px 10px;
+    font-family: "Outfit";
+    font-size: 16px;
+    margin: 0;
+    transition: none;
+    background: #fff;
+    box-sizing: border-box;
+    color: #000;
+  }
+
+  .contact-form input::placeholder,
+  .contact-form select::placeholder,
+  .contact-form textarea::placeholder {
+    color: #000;
+  }
+  .contact-form textarea {
+    padding: 10px 15px 10px 15px;
+  }
+
+  /* Botão de enviar formulário */
+  .send-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .send-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
   }
   /* Rodapé */
 

@@ -142,6 +142,15 @@ document.addEventListener("DOMContentLoaded", function () {
       delay: 0,
       reset: false,
     });
+    ScrollReveal().reveal(".galery", {
+      origin: "bottom",
+      distance: "40px",
+      duration: 700,
+      delay: 0,
+      easing: "ease-in-out",
+      reset: false,
+    });
+
     ScrollReveal().reveal(".project", {
       origin: "bottom",
       distance: "40px",
