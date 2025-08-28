@@ -260,8 +260,15 @@ header nav .title .second-name {
   .project-bottom p {
     text-transform: uppercase;
     color: #000046;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family: "Outfit-Light";
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    text-align: center;
+    padding-left: 1.5rem;
   }
 
   .project-bottom span {
@@ -272,6 +279,7 @@ header nav .title .second-name {
   .technologys {
     display: flex;
     gap: 10px;
+    padding-right: 1.5rem;
   }
   .technology-used {
     width: 25px;
@@ -511,6 +519,15 @@ header nav .title .second-name {
     font-family: "Outfit-Light";
   }
 
+  .project-bottom p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    text-align: center;
+    padding-left: 1.5rem;
+  }
+
   .project-bottom span {
     margin: 0px 6px;
     font-size: 1.3rem;
@@ -519,6 +536,7 @@ header nav .title .second-name {
   .technologys {
     display: flex;
     gap: 10px;
+    padding-right: 1.5rem;
   }
   .technology-used {
     width: 25px;

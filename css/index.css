@@ -525,8 +525,15 @@
   .project-bottom p {
     text-transform: uppercase;
     color: #000046;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family: "Outfit-Light";
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    text-align: center;
+    padding-left: 1.5rem;
   }
 
   .project-bottom span {
@@ -537,6 +544,7 @@
   .technologys {
     display: flex;
     gap: 10px;
+    padding-right: 1.5rem;
   }
   .technology-used {
     width: 25px;
@@ -1205,6 +1213,15 @@
     font-family: "Outfit-Light";
   }
 
+  .project-bottom p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    text-align: center;
+    padding-left: 1.5rem;
+  }
+
   .project-bottom span {
     margin: 0px 6px;
     font-size: 1.3rem;
@@ -1213,6 +1230,7 @@
   .technologys {
     display: flex;
     gap: 10px;
+    padding-right: 1.5rem;
   }
   .technology-used {
     width: 25px;
@@ -1238,7 +1256,7 @@
     letter-spacing: 1;
   }
 
-   /* Corpo do formulário */
+  /* Corpo do formulário */
   .forms-section {
     display: flex;
     flex-direction: column;
