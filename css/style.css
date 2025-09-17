@@ -19,18 +19,20 @@ body {
 }
 
 /* Barra de navegação */
+
+
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 22px;
-  margin: 10px 20px;
+  margin: 1.5rem 1rem;
 }
 /* Titulo */
 
 header nav .title {
   white-space: normal;
-  margin: 10px 0px 0px 10px;
+  margin-left: 10px;
 }
 
 .title .name,
@@ -110,4 +112,3 @@ header nav .title .second-name {
 .contact-box a {
   color: #000;
 }
-

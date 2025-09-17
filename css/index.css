@@ -16,8 +16,17 @@
   }
 
   /* Cabecalho */
+
+  header {
+    position: fixed;
+    height: auto;
+    width: 100%;
+    z-index: 1;
+    background-color: #ffffff;
+  }
+
   header nav {
-    margin: 17px 118px 0px 76px;
+    margin: 1rem 7.375rem 1rem 4.75rem;
   }
   header nav .nav-list {
     display: flex;
@@ -67,6 +76,7 @@
 
   /* Conteudo principal */
   /* O conteúdo principal cresce, o footer vai pro fim */
+
   .content-container {
     height: 82vh;
     display: flex;
@@ -687,7 +697,11 @@
     overflow-x: hidden;
   }
   header {
-    z-index: 1000; /* para ficar acima dos outros elementos */
+    position: fixed;
+    height: auto;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1; /* para ficar acima dos outros elementos */
   }
 
   .content-container {
@@ -776,6 +790,10 @@
   }
 
   /* Corpo da pagina */
+  main {
+    margin-top: 5rem;
+  }
+
   .content-container {
     display: flex;
     justify-content: center;
