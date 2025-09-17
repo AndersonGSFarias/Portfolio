@@ -185,7 +185,7 @@ header nav .title .second-name {
   .galery-container {
     display: flex;
     flex-direction: column;
-    margin: 0px 118px 80px 76px;
+    margin: 0px 5rem 10rem 5rem;
   }
 
   .title-box {
