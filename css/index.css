@@ -481,8 +481,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, 333px);
     gap: 60px 60px;
-    /* justify-content: center; Alinha o elemento no meio depois que tiver mais conteudo */
+    justify-content: center; 
     margin-bottom: 30px;
+    
   }
 
   .galery a {
