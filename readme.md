@@ -6,7 +6,7 @@ Esse é meu projeto portoflio para você conhecer um pouco mais sobre mim e sobr
 Por enquanto estou atualizando cada vez mais, em busca do portfolio perfeito! 🚀
 ## Screenshots
 
-**Link:** https://andersongsfarias.github.io/Porftolio/
+**Link:** https://andersongsfarias.github.io/Portfolio
 
 • **Desktop**
 
