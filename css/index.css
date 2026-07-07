@@ -108,6 +108,9 @@
   }
   .my-img {
     margin-bottom: 30px;
+    width: 14rem;
+    border-radius: 50%;
+    object-fit: cover;
   }
 
   /* Caixa dos contatos no desktop */
@@ -438,6 +441,8 @@
 
   .more-certificate-btn {
     transition: transform 0.3s ease;
+    color: #000046;
+
   }
 
   .more-certificate-btn:visited {
@@ -481,9 +486,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, 333px);
     gap: 60px 60px;
-    justify-content: center; 
+    justify-content: center;
     margin-bottom: 30px;
-    
   }
 
   .galery a {
@@ -753,7 +757,9 @@
     max-width: 0;
     padding: 0;
     border: none;
-    transition: max-width 0.3s ease, padding 0.3s ease;
+    transition:
+      max-width 0.3s ease,
+      padding 0.3s ease;
   }
 
   .nav-list.active {
@@ -954,7 +960,9 @@
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: max-height 1s ease-in-out, opacity 1s ease;
+    transition:
+      max-height 1s ease-in-out,
+      opacity 1s ease;
     margin-top: 0;
   }
 
